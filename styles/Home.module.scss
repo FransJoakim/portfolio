@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  align-content: center;
+
+  * {
+    margin: 3rem;
+  }
+
+  &_Image {
+  }
+
+  &_Name {
+    font-size: 7rem;
+  }
+}
+
+.projects {
+  height: 1000px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
