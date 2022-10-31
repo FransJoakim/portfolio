@@ -1,27 +1,145 @@
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  align-content: center;
+$container-size: 50vw;
+$squares-count: 5;
 
-  * {
-    margin: 3rem;
-  }
+$square-size: $container-size/$squares-count;
+$lines-size: $square-size/$squares-count;
+$squares-padding: 0;
 
-  &_Image {
-  }
+$animation-time: 30s;
+$animation-curve: cubic-bezier(1, 0.5, 0.25, 0.5);
+// $animation-curve: ease-in-out;
 
-  &_Name {
-    font-size: 7rem;
+.container {
+  transform: translate(-50%, -50%);
+  height: $container-size;
+  width: $container-size;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  .row {
+    position: relative;
+    float: left;
+    width: 100%;
+    clear: both;
+
+    .loader {
+      position: relative;
+      display: inline-block;
+      height: $square-size;
+      width: $square-size;
+      float: left;
+
+      .lines {
+        bottom: $squares-padding;
+        right: $squares-padding;
+        left: $squares-padding;
+        top: $squares-padding;
+        position: absolute;
+
+        span {
+          animation: shift-background $animation-time infinite $animation-curve;
+          background-color: white;
+          position: absolute;
+          width: $lines-size;
+          height: 3px;
+          &::before {
+            background-color: inherit;
+            height: $lines-size;
+            position: absolute;
+            content: "";
+            width: 3px;
+          }
+          &:nth-child(1),
+          &:nth-child(4),
+          &:nth-child(1)::before,
+          &:nth-child(4)::before {
+            left: 0;
+          }
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(2)::before,
+          &:nth-child(3)::before {
+            right: 0;
+          }
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(1)::before,
+          &:nth-child(2)::before {
+            top: 0;
+          }
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(3)::before,
+          &:nth-child(4)::before {
+            bottom: 0;
+          }
+        }
+      }
+    }
+    &:nth-child(even) > .loader:nth-child(even) > .lines {
+      animation: rotate-right $animation-time infinite $animation-curve;
+    }
+    &:nth-child(even) > .loader:nth-child(odd) > .lines {
+      animation: rotate-left $animation-time infinite $animation-curve;
+    }
+    &:nth-child(odd) > .loader:nth-child(even) > .lines {
+      animation: rotate-left $animation-time infinite $animation-curve;
+    }
+    &:nth-child(odd) > .loader:nth-child(odd) > .lines {
+      animation: rotate-right $animation-time infinite $animation-curve;
+    }
   }
 }
 
-.projects {
-  height: 1000px;
-  width: 100%;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+@keyframes rotate-right {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+}
+
+@keyframes shift-background {
+  0%,
+  100% {
+    background-color: #f4f3f3;
+  }
+  25% {
+    background-color: #dfdfdf;
+  }
+  50% {
+    background-color: #dfdfdf;
+  }
+  75% {
+    background-color: #b1bed5;
+  }
 }
