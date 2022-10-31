@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex-col">
+    <div className="flex-col h-full">
       <Header />
       <Main />
       {/* <Portfolio />
