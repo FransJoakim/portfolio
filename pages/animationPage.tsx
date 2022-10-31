@@ -1,4 +1,4 @@
-import Animation from "../components/animation";
+import Animation from "../components/BoxAnimation";
 
 export default function animationPage() {
   return (

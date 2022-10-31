@@ -1,4 +1,4 @@
-$container-size: 50vw;
+$container-size: 45vw;
 $squares-count: 5;
 
 $square-size: $container-size/$squares-count;
@@ -14,8 +14,8 @@ $animation-curve: cubic-bezier(1, 0.5, 0.25, 0.5);
   height: $container-size;
   width: $container-size;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 33%;
+  top: 75%;
 
   .row {
     position: relative;

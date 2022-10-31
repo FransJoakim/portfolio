@@ -1,12 +1,12 @@
 import styles from "../styles/Home.module.scss";
 
-const Animation = () => {
+export const BoxAnimation = () => {
   return (
     <div className={styles.container}>
-      {[1, 2, 3, 4, 5].map((x) => {
+      {[1, 2, 3, 4].map((x) => {
         return (
           <div key={x} className={styles.row}>
-            {[1, 2, 3, 4, 5].map((y) => {
+            {[1, 2, 3, 4].map((y) => {
               return (
                 <div key={y} className={styles.loader}>
                   <div className={styles.lines}>
@@ -23,5 +23,3 @@ const Animation = () => {
     </div>
   );
 };
-
-export default Animation;
