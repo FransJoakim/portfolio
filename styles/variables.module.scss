@@ -1,0 +1,6 @@
+// https://nextjs.org/docs/basic-features/built-in-css-support#sass-variables
+$backgroundColor: linear-gradient(-45deg, #f4f3f3, #dfdfdf, #bfd8d5, #b1bed5);
+
+:export {
+  backgroundColor: $backgroundColor;
+}

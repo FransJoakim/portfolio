@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="w-full h-1/2 mt-20 flex justify-end">
-      <div className="w-5/12 h-full mr-32 p-12 border-solid border-white border-2">
-        <div className="flex justify-between items-start mt-4">
+    <section className="w-full h-full flex justify-end">
+      <div className="w-6/12 h-full flex flex-col justify-between mr-16 p-12">
+        <div className="flex w-3/4 mt-10 justify-between items-start">
+          <Image src="/me.png" height="210em" width="210em" />
           <Info />
-          <Image src="/me.png" height="200em" width="200em" />
         </div>
         <TechStack />
       </div>
@@ -41,40 +41,157 @@ const Info = () => {
 };
 
 const TechStack = () => {
-  const height = 16;
+  const rect = 80;
+  const height = rect;
+  const width = rect;
 
   return (
     <>
-      <div className="text-xl font-bold">Tech stack</div>
-      <div className="flex flex-col W-full">
-        <div className="flex W-full justify-between items-center">
-          <img src="/icons/html.png" alt="" className={`h-${height}`} />
-          <img src="/icons/css.png" alt="" className={`h-${height}`} />
-          <img src="/icons/JS.png" alt="" className={`h-${height}`} />
-          <img src="/icons/typescript.png" alt="" className={`h-${height}`} />
+      <div className="flex flex-col w-full gap-y-1">
+        <div className="flex w-full justify-between items-center relative">
+          <Image
+            src="/icons/typescript.png"
+            alt="TypeScript"
+            width={`${width * 0.8}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/JS.png"
+            alt="JavaScript"
+            width={`${width * 0.8}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/html.png"
+            alt="HTML"
+            width={`${width}`}
+            height={`${height * 0.9}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/css.png"
+            alt="CSS"
+            width={`${width}`}
+            height={`${height * 0.9}`}
+            objectFit="contain"
+          />
         </div>
-        <div className="flex W-full justify-between items-center">
-          <img src="/icons/react.png" alt="" className={`h-${height}`} />
-          <img src="/icons/redux.png" alt="" className={`h-${height}`} />
-          <img src="/icons/recoil.png" alt="" className={`h-${height}`} />
-          <img src="/icons/NextJs.png" alt="" className={`h-${height}`} />
+        <div className="flex w-full justify-between items-center">
+          <Image
+            src="/icons/react.png"
+            alt="React"
+            width={`${width * 0.8}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/redux.png"
+            alt="Redux"
+            width={`${width * 2}`}
+            height={`${height}`}
+            objectFit="contain"
+            style={{ marginLeft: "0.9rem" }}
+          />
+          <Image
+            src="/icons/recoil.png"
+            alt="Recoil"
+            width={`${width * 1.3}`}
+            height={`${height * 0.75}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/NextJs.png"
+            alt="NextJS"
+            width={`${width * 1.5}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
         </div>
-        <div className="flex W-full justify-between items-center">
-          <img src="/icons/sass.png" alt="" className={`h-${height}`} />
-          <img src="/icons/tailwind.png" alt="" className="h-12 w-48" />
-          <img src="/icons/bootstrap.png" alt="" className="h-12" />
+        <div className="flex w-full justify-between items-center">
+          <Image
+            src="/icons/sass.png"
+            alt="SASS"
+            width={`${width * 0.9}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/tailwind.png"
+            alt="TailwindCSS"
+            width={`${width * 2.7}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/bootstrap.png"
+            alt="React Bootstrap"
+            width={`${width * 0.8}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
         </div>
-        <div className="flex W-full justify-between items-center">
-          <img src="/icons/firebase.png" alt="" className={`h-${height}`} />
-          <img src="/icons/gcp.png" alt="" className={`h-${height}`} />
-          <img src="/icons/docker.png" alt="" className={`h-${height}`} />
-          <img src="/icons/git.png" alt="" className={`h-${height}`} />
+        <div className="flex w-full justify-between items-center">
+          <Image
+            src="/icons/firebase.png"
+            alt="Firebase"
+            width={`${width * 0.8}`}
+            height={`${height * 0.8}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/gcp.png"
+            alt="Google Cloud Platform"
+            width={`${width * 1.8}`}
+            height={`${height}`}
+            objectFit="contain"
+            style={{ marginLeft: "-1rem" }}
+          />
+          <Image
+            src="/icons/docker.png"
+            alt="Docker"
+            width={`${width * 2}`}
+            height={`${height * 0.9}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/git.png"
+            alt="Git"
+            width={`${width}`}
+            height={`${height * 0.8}`}
+            objectFit="contain"
+          />
         </div>
-        <div className="flex W-full justify-between items-center">
-          <img src="/icons/node.png" alt="" className={`h-${height}`} />
-          <img src="/icons/express.png" alt="" className="h-12 w-32" />
-          <img src="/icons/mongo.png" alt="" className={`h-${height}`} />
-          <img src="/icons/postgreSql.png" alt="" className={`h-${height}`} />
+        <div className="flex w-full justify-between items-center">
+          <Image
+            src="/icons/node.png"
+            alt="NodeJS"
+            width={`${width}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/express.png"
+            alt="ExpressJS"
+            width={`${width * 1.5}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/mongodb.png"
+            alt="MongoDB"
+            width={`${width * 1.5}`}
+            height={`${height}`}
+            objectFit="contain"
+          />
+          <Image
+            src="/icons/postgreSql.png"
+            alt="PostgreSQL"
+            width={`${width}`}
+            height={`${height * 0.8}`}
+            objectFit="contain"
+          />
         </div>
       </div>
     </>
