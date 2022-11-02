@@ -1,21 +1,30 @@
 [
   {
-    "title": "Kabal / Solitarie",
-    "type": "Game",
-    "technologies": [],
-    "description": "",
-    "img": "card-tableau",
-    "URL": "http://localhost:3000/",
-    "date": "October 2022"
+    "title": "MyPrivateChef",
+    "type": "Website",
+    "technologies": ["React", "Firebase & Firestore"],
+    "description": "Final project at Salt bootcamp",
+    "img": "myPrivateChef",
+    "URL": "https://myprivatechef-finalproject.web.app/",
+    "date": "April 2022"
   },
   {
     "title": "Norwegian skiing",
     "type": "Website",
     "technologies": ["GatsbyJS", "Contentful", "GraphQL"],
     "description": "",
-    "img": "card-tableau",
-    "URL": "http://localhost:3000/",
+    "img": "norwegianSkiing",
+    "URL": "https://withoutfooter--majestic-boba-7f411f.netlify.app/",
     "date": "September 2022"
+  },
+  {
+    "title": "Solitarie/Kabal",
+    "type": "Game",
+    "technologies": ["React", "Recoil", "React-DnD", "Tailwind"],
+    "description": "Card game I made to practice game logic and state management",
+    "img": "card-tableau",
+    "URL": "/",
+    "date": "October 2022"
   },
   {
     "title": "SkyeCV",
@@ -23,17 +32,8 @@
     "technologies": ["HTML, CSS, JavaScript"],
     "description": "",
     "img": "card-tableau",
-    "URL": "http://localhost:3000/",
+    "URL": "/",
     "date": "June 2022"
-  },
-  {
-    "title": "MyPrivateChef",
-    "type": "Website",
-    "technologies": ["React", "Firebase & Firestore"],
-    "description": "",
-    "img": "card-tableau",
-    "URL": "http://localhost:3000/",
-    "date": "April 2022"
   },
   {
     "title": "Snake",
@@ -41,7 +41,7 @@
     "technologies": ["HTML, CSS, JavaScript"],
     "description": "",
     "img": "card-tableau",
-    "URL": "http://localhost:3000/",
+    "URL": "/",
     "date": "July 2022"
   },
   {
@@ -50,7 +50,7 @@
     "technologies": ["HTML, CSS, JQuery"],
     "description": "",
     "img": "card-tableau",
-    "URL": "http://localhost:3000/",
+    "URL": "/",
     "date": "March 2019"
   }
 ]

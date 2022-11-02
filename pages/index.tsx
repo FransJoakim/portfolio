@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import { Header } from "../components/Header";
-import { Main } from "../components/Main";
-import Portfolio from "../components/Portfolio";
+import { Header } from "../components/header/Header";
+import { Main } from "../components/about/Main";
+import Portfolio from "../components/portfolio/Portfolio";
 import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
@@ -9,8 +9,8 @@ const Home: NextPage = () => {
     <div className="flex-col h-screen">
       <Header />
       <Main />
-      {/* <Portfolio />
-      <Contact /> */}
+      <Portfolio />
+      {/* <Contact /> */}
     </div>
   );
 };
