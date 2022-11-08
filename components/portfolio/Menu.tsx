@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import styles from "../../styles/Home.module.scss";
 import {
@@ -23,15 +24,13 @@ export const Card = ({ project }: { project: portfolioProject }) => {
 
   return (
     <div className={styles.card} onClick={() => setdisplayedProject(project)}>
-      <div className={styles.card_wrapper}>
-        <div
-          className={styles.card_backgroundImage}
-          style={{ backgroundImage: `./projectPhotos/${img}.png` }}
-        ></div>
-        <div className={styles.card_text}>
-          <p className={styles.card_text_title}>{title}</p>
-          <p className={styles.card_text_date}>{date.toUpperCase()}</p>
-        </div>
+      <div className={styles.card_image}>
+        <Image src={`/projectPhotos/${img}.png`} layout="fill" />
+      </div>
+
+      <div className={styles.card_text}>
+        <p className={styles.card_text_title}>{title}</p>
+        <p className={styles.card_text_date}>{date.toUpperCase()}</p>
       </div>
     </div>
   );
