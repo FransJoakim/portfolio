@@ -6,6 +6,8 @@ import { Scrollspy } from "./scrollspy";
 export const Header = () => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
 
+  console.log(clientWindowView);
+
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(60);
   const [boxShadow, setBoxShadow] = useState(0);
