@@ -93,7 +93,7 @@ export class Scrollspy extends React.Component<ScrollspyProps, ScrollspyState> {
       this.props;
     return (
       <ul className={classNames(itemContainerClassName)}>
-        {this.state.items.reverse().map((item, k) => {
+        {this.state.items.map((item, k) => {
           return (
             <li
               className={classNames(

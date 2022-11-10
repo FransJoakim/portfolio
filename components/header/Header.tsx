@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { clientWindowViewState } from "../../pages";
-import { Scrollspy } from "./scrollspy";
+import { Scrollspy } from "../../features/scrollspy";
+import styles from "../styles/Home.module.scss";
 
 export const Header = () => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
@@ -25,14 +26,14 @@ export const Header = () => {
   return (
     <header
       style={{
-        background: `rgba(255, 255, 255, ${backgroundTransparacy})`,
-        padding: `${padding}px 0px`,
+        background: `rgba(255, 255, 255, ${backgroundTransparacy - 0.5})`,
+        padding: `${padding}px 2rem 1rem 0`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
         zIndex: "100",
       }}
     >
       <Scrollspy
-        ids={["portfolio", "about", "contact"]}
+        ids={["about", "portfolio", "contact"]}
         itemContainerClassName="scrollSpyContainer"
         activeItemClassName="active"
         itemClassName="spyItemClass"

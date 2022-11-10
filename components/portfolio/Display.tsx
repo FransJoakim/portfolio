@@ -23,21 +23,36 @@ export default function Display() {
 }
 
 const ProjectInfo = () => {
-  const { title, description, technologies, date } =
+  const { title, description, technologies, date, type, URL } =
     useRecoilValue(displayedProjectAtom);
   return (
     <div className={styles.projectInfo}>
       <p>Project:</p>
       <h2 className="text-4xl">{title}</h2>
+      <p>{type}</p>
       <p className={styles.projectInfo_description}>{description}</p>
-      <h4 className="text-2xl">
+      <h3 className="text-2xl">
         <b>Tech</b>
-      </h4>
+      </h3>
       <p>
         {technologies.map((tech) => {
           return <span key={tech}>{tech + ", "}</span>;
         })}
       </p>
+      <div className="mt-2">
+        <h4 className="text-l">
+          <b>Published</b>
+        </h4>
+        <p>{date}</p>
+      </div>
+      <div className="mt-2">
+        <h4 className="text-l">
+          <b>Adress</b>
+        </h4>
+        <a href={URL} target="_blank">
+          {URL}
+        </a>
+      </div>
     </div>
   );
 };

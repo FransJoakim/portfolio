@@ -36,7 +36,7 @@ const Home: NextPage = () => {
       <ScrollPosition scrollEntryPoint={500} scrollExitPoint={2300}>
         <Portfolio />
       </ScrollPosition>
-      <ScrollPosition scrollEntryPoint={2500} scrollExitPoint={3000}>
+      <ScrollPosition scrollEntryPoint={2400} scrollExitPoint={3000}>
         <Contact />
       </ScrollPosition>
     </div>
