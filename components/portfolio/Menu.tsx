@@ -20,10 +20,16 @@ export default function Menu() {
 
 export const Card = ({ project }: { project: portfolioProject }) => {
   const { title, description, technologies, img, URL, date } = project;
-  const setdisplayedProject = useSetRecoilState(displayedProjectAtom);
+  const displayedProject = useRecoilValue(displayedProjectAtom);
+
+  const isDisplayed = title === displayedProject.title;
 
   return (
-    <div className={styles.card} onClick={() => setdisplayedProject(project)}>
+    <section
+      id={isDisplayed ? styles.displayed_card : ""}
+      className={styles.card}
+      // onClick={() => setdisplayedProject(project)}
+    >
       <div className={styles.card_image}>
         <Image src={`/projectPhotos/${img}.png`} layout="fill" />
       </div>
@@ -32,6 +38,6 @@ export const Card = ({ project }: { project: portfolioProject }) => {
         <p className={styles.card_text_title}>{title}</p>
         <p className={styles.card_text_date}>{date.toUpperCase()}</p>
       </div>
-    </div>
+    </section>
   );
 };

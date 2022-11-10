@@ -43,14 +43,5 @@
     "img": "card-tableau",
     "URL": "/",
     "date": "July 2022"
-  },
-  {
-    "title": "My first game",
-    "type": "Game",
-    "technologies": ["HTML, CSS, JQuery"],
-    "description": "",
-    "img": "card-tableau",
-    "URL": "/",
-    "date": "March 2019"
   }
 ]

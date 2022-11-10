@@ -17,9 +17,10 @@ const Home: NextPage = () => {
   const setClientWindowView = useSetRecoilState(clientWindowViewState);
 
   useEffect(() => {
+    // setClientWindowView(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, []);
 
   const handleScroll = () => {
     setClientWindowView(window.scrollY);
@@ -30,11 +31,12 @@ const Home: NextPage = () => {
       <Header />
       <Main />
       {/* <ScrollPosition scrollEntryPoint={-500} scrollExitPoint={300}>
+        <Main />
       </ScrollPosition> */}
-      <ScrollPosition scrollEntryPoint={500} scrollExitPoint={1000}>
+      <ScrollPosition scrollEntryPoint={500} scrollExitPoint={2300}>
         <Portfolio />
       </ScrollPosition>
-      <ScrollPosition scrollEntryPoint={1200} scrollExitPoint={2500}>
+      <ScrollPosition scrollEntryPoint={2500} scrollExitPoint={3000}>
         <Contact />
       </ScrollPosition>
     </div>

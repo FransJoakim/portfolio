@@ -8,12 +8,20 @@ export function Main() {
   const clientWindowView = useRecoilValue(clientWindowViewState);
   const sectionRef = useRef<HTMLDivElement>(null);
 
+  const scrollEntryPoint = -500;
   const scrollExitPoint = 300;
 
   useEffect(() => {
     if (sectionRef.current) {
-      if (clientWindowView < scrollExitPoint) {
-        const opacity = 0 + (clientWindowView - -500) / 200;
+      if (clientWindowView < scrollEntryPoint) {
+        sectionRef.current.style.visibility = "hidden";
+      }
+
+      if (
+        clientWindowView > scrollEntryPoint &&
+        clientWindowView < scrollExitPoint
+      ) {
+        const opacity = 0 + (clientWindowView - scrollEntryPoint) / 200;
         sectionRef.current.style.opacity = opacity.toString();
         sectionRef.current.style.visibility = "visible";
       }

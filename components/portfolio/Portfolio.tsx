@@ -1,9 +1,11 @@
-import { atom } from "recoil";
+import { useEffect } from "react";
+import { atom, useRecoilValue, useSetRecoilState } from "recoil";
 import portfolioProjects from "../../data.json" assert { type: "json" };
 import styles from "../../styles/Home.module.scss";
 import Display from "./Display";
 import Menu from "./Menu";
 import BracketAnimation from "../BracketAnimation";
+import { clientWindowViewState } from "../../pages/index";
 
 export interface portfolioProject {
   title: string;
@@ -26,6 +28,25 @@ export const displayedProjectAtom = atom<portfolioProject>({
 });
 
 const Portfolio = () => {
+  const clientWindowView = useRecoilValue(clientWindowViewState);
+  const setDisplayedProject = useSetRecoilState(displayedProjectAtom);
+
+  useEffect(() => {
+    const num = -500 + clientWindowView;
+
+    if (num < 500) {
+      setDisplayedProject(portfolioProjects[0]);
+    } else if (num < 800) {
+      setDisplayedProject(portfolioProjects[1]);
+    } else if (num < 1100) {
+      setDisplayedProject(portfolioProjects[2]);
+    } else if (num < 1400) {
+      setDisplayedProject(portfolioProjects[3]);
+    } else if (num < 1700) {
+      setDisplayedProject(portfolioProjects[4]);
+    }
+  }, [clientWindowView]);
+
   return (
     <section className={styles.portfolio}>
       <div id="portfolio" className="hidden">
@@ -35,7 +56,7 @@ const Portfolio = () => {
         <Display />
         <Menu />
       </div>
-      {/* <BracketAnimation /> */}
+      <BracketAnimation />
     </section>
   );
 };
