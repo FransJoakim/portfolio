@@ -28,9 +28,9 @@ const Home: NextPage = () => {
   return (
     <div id={styles.page} className="flex-col h-screen">
       <Header />
-      <ScrollPosition scrollEntryPoint={-500} scrollExitPoint={300}>
-        <Main />
-      </ScrollPosition>
+      <Main />
+      {/* <ScrollPosition scrollEntryPoint={-500} scrollExitPoint={300}>
+      </ScrollPosition> */}
       <ScrollPosition scrollEntryPoint={500} scrollExitPoint={1000}>
         <Portfolio />
       </ScrollPosition>

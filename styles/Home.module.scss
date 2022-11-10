@@ -185,16 +185,20 @@
       display: flex;
       justify-content: space-between;
 
+      .projectInfo {
+        // background-color: #9fd3c7;
+
+        &_description {
+          margin: 1rem 0;
+          font-size: large;
+        }
+      }
+
       &_image {
         height: 25rem;
         width: 55%;
         position: relative;
         display: flex;
-      }
-
-      &_description {
-        margin: 1rem 0;
-        font-size: large;
       }
     }
 
@@ -253,27 +257,30 @@
     border-radius: 0.25em;
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    left: 50%;
     padding: 10vmin;
     position: fixed;
     text-align: center;
+    width: 50%;
+    height: 51%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
     h2 {
-      font-family: monospace;
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     input {
-      margin-bottom: 1rem;
       height: 2rem;
+      width: 100%;
       padding: 1.1rem;
       font-size: larger;
+      margin-bottom: 1rem;
     }
 
     textarea {
-      height: 40rem;
+      height: 10rem;
+      width: 100%;
       padding: 1.2rem;
       font-size: larger;
     }
@@ -296,17 +303,18 @@ $green: #9fd3c7;
 .svg {
   stroke: $green;
   position: absolute;
-  bottom: -100vh;
+  bottom: 0vh;
   transform-style: preserve-3d;
+  z-index: -100;
 }
 
-$total: 6;
+$total: 5;
 @for $i from 1 through $total {
-  $scale: random(1) - 0.4;
+  $scale: random(2) - 0.4;
 
   .svg:nth-child(#{$i}) {
-    left: random(120) * 1% - 20;
-    animation: raise#{$i} 6 + random(15) + s linear infinite;
+    left: random(120) * 2% - 20;
+    animation: raise#{$i} 2 + random(5) + s linear infinite;
     animation-delay: random(200) - 5 + s;
     transform: scale(0.1 * $i - 0.1) rotate(random(360) + deg);
     z-index: $i - 7;
@@ -315,7 +323,7 @@ $total: 6;
     @keyframes raise#{$i} {
       to {
         bottom: 150vh;
-        transform: scale(0.1 * $i - 0.1) rotate(random(360) + deg);
+        transform: scale(1 * $i - 1) rotate(random(360) + deg);
       }
     }
   }

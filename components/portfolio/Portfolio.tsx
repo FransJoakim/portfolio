@@ -26,8 +26,6 @@ export const displayedProjectAtom = atom<portfolioProject>({
 });
 
 const Portfolio = () => {
-  console.log("hi");
-
   return (
     <section className={styles.portfolio}>
       <div id="portfolio" className="hidden">

@@ -26,10 +26,10 @@ const ProjectInfo = () => {
   const { title, description, technologies, date } =
     useRecoilValue(displayedProjectAtom);
   return (
-    <div>
+    <div className={styles.projectInfo}>
       <p>Project:</p>
       <h2 className="text-4xl">{title}</h2>
-      <p className={styles.displayedProject_description}>{description}</p>
+      <p className={styles.projectInfo_description}>{description}</p>
       <h4 className="text-2xl">
         <b>Tech</b>
       </h4>
