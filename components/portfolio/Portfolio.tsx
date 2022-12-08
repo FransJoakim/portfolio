@@ -42,9 +42,10 @@ const Portfolio = () => {
       setDisplayedProject(portfolioProjects[2]);
     } else if (num < 1400) {
       setDisplayedProject(portfolioProjects[3]);
-    } else if (num < 1700) {
-      setDisplayedProject(portfolioProjects[4]);
     }
+    // else if (num < 1700) {
+    //   setDisplayedProject(portfolioProjects[4]);
+    // }
   }, [clientWindowView, setDisplayedProject]);
 
   return (
