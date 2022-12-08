@@ -11,9 +11,9 @@ export const Header = () => {
   const [padding, setPadding] = useState(60);
   const [boxShadow, setBoxShadow] = useState(0);
 
-  useEffect(() => {
-    window.scroll(0, 500 + 200);
-  }, []);
+  // useEffect(() => {
+  //   window.scroll(0, 500 + 200);
+  // }, []);
 
   useEffect(() => {
     let backgroundTransparacyVar = clientWindowView / 600;
