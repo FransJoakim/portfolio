@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { clientWindowViewState } from "../../pages";
-// import { Scrollspy } from "../../features/scrollspy";
 import classNames from "classnames";
+import { inViewAtom } from "../../features/ScrollPosition";
 
 export const Header = () => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
+  const inView = useRecoilValue(inViewAtom);
 
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(60);
   const [boxShadow, setBoxShadow] = useState(0);
-
-  // useEffect(() => {
-  //   window.scroll(0, 500 + 200);
-  // }, []);
 
   useEffect(() => {
     let backgroundTransparacyVar = clientWindowView / 600;
@@ -36,44 +33,45 @@ export const Header = () => {
         zIndex: "100",
       }}
     >
-      <ul className="scrollSpyContainer"></ul>
-
-      {/* <Scrollspy
-        ids={["about", "portfolio", "contact"]}
-        itemContainerClassName="scrollSpyContainer"
-        activeItemClassName="active"
-        itemClassName="spyItemClass"
-      /> */}
+      <ul className="scrollSpyContainer">
+        <li
+          className={classNames(
+            "spyItemClass",
+            inView === "about" ? "active" : null
+          )}
+          key={"about"}
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
+        >
+          About
+        </li>
+        <li
+          className={classNames(
+            "spyItemClass",
+            inView === "portfolio" ? "active" : null
+          )}
+          key={"portfolio"}
+          onClick={() => {
+            window.scroll(0, 500 + 200);
+          }}
+        >
+          Portfolio
+        </li>
+        <li
+          className={classNames(
+            "spyItemClass",
+            inView === "contact" ? "active" : null
+          )}
+          key={"contact"}
+          onClick={() => {
+            window.scroll(0, 2400 + 200);
+          }}
+        >
+          Contact
+        </li>
+      </ul>
       <p className="pl-8 text-5xl">Frans Joakim Titulaer</p>
     </header>
   );
 };
-
-// const ScrollSpy = () => {
-//   const clientWindowView = useRecoilValue(clientWindowViewState);
-
-//   useEffect(() => {
-//     window.scroll(0, 500);
-//     // const num = -500 + clientWindowView;
-
-//     // if (num < itemEntrence) {
-//     // } else if (num < 800) {
-//     //   setDisplayedProject(portfolioProjects[1]);
-//     // }
-//   }, [clientWindowView]);
-
-//   return (
-//     <li
-//       className={classNames(
-//         "spyItemClass",
-//         item.inView ? activeItemClassName : null
-//       )}
-//       key={k}
-//       onClick={() => {
-//         scrollTo(item.element);
-//       }}
-//     >
-//       {item.element.innerText}
-//     </li>
-//   );
-// };

@@ -1,12 +1,14 @@
 import { useEffect, useRef } from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { clientWindowViewState } from "../../pages/index";
 import About from "./About";
 import { BoxAnimation } from "../BoxAnimation";
+import { inViewAtom } from "../../features/ScrollPosition";
 
 export function Main() {
   const clientWindowView = useRecoilValue(clientWindowViewState);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const setInView = useSetRecoilState(inViewAtom);
 
   const scrollEntryPoint = -500;
   const scrollExitPoint = 300;
@@ -24,6 +26,7 @@ export function Main() {
         const opacity = 0 + (clientWindowView - scrollEntryPoint) / 200;
         sectionRef.current.style.opacity = opacity.toString();
         sectionRef.current.style.visibility = "visible";
+        setInView("about");
       }
 
       if (
@@ -33,6 +36,7 @@ export function Main() {
         const opacity = 1 - (clientWindowView - scrollExitPoint) / 200;
         sectionRef.current.style.opacity = opacity.toString();
         sectionRef.current.style.visibility = "visible";
+        setInView("about");
       }
 
       if (clientWindowView > scrollExitPoint + 200) {

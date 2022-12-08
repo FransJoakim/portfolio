@@ -1,19 +1,28 @@
 import { useEffect, useRef } from "react";
-import { useRecoilValue } from "recoil";
+import { atom, useRecoilValue, useSetRecoilState } from "recoil";
 import { clientWindowViewState } from "../pages/index";
 
 type Props = {
   scrollEntryPoint: number;
   scrollExitPoint: number;
+  name: string;
   children: JSX.Element;
 };
+
+export const inViewAtom = atom({
+  key: "inView",
+  default: "about",
+  dangerouslyAllowMutability: true,
+});
 
 const ScrollPosition = ({
   scrollEntryPoint,
   scrollExitPoint,
+  name,
   children,
 }: Props) => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
+  const setInView = useSetRecoilState(inViewAtom);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,6 +38,7 @@ const ScrollPosition = ({
         const opacity = 0 + (clientWindowView - scrollEntryPoint) / 200;
         sectionRef.current.style.opacity = opacity.toString();
         sectionRef.current.style.visibility = "visible";
+        setInView(name);
       }
 
       if (
@@ -38,6 +48,7 @@ const ScrollPosition = ({
         const opacity = 1 - (clientWindowView - scrollExitPoint) / 200;
         sectionRef.current.style.opacity = opacity.toString();
         sectionRef.current.style.visibility = "visible";
+        setInView(name);
       }
 
       if (clientWindowView > scrollExitPoint + 200) {

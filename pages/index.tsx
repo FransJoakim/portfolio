@@ -21,7 +21,6 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    console.log(Date.now());
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
@@ -33,10 +32,18 @@ const Home: NextPage = () => {
       {/* <ScrollPosition scrollEntryPoint={-500} scrollExitPoint={300}>
         <Main />
       </ScrollPosition> */}
-      <ScrollPosition scrollEntryPoint={500} scrollExitPoint={2300}>
+      <ScrollPosition
+        scrollEntryPoint={500}
+        scrollExitPoint={2300}
+        name="portfolio"
+      >
         <Portfolio />
       </ScrollPosition>
-      <ScrollPosition scrollEntryPoint={2400} scrollExitPoint={3000}>
+      <ScrollPosition
+        scrollEntryPoint={2400}
+        scrollExitPoint={3000}
+        name="contact"
+      >
         <Contact />
       </ScrollPosition>
     </div>
