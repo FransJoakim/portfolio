@@ -10,13 +10,14 @@ export default function Display() {
     <div className={styles.displayedProject}>
       <ProjectInfo />
       <div className={styles.displayedProject_image}>
-        <Link href={URL}>
+        <a href={URL} target="_blank" rel="noopener noreferrer">
           <Image
             src={`/projectPhotos/${img}.png`}
             layout="fill"
             objectFit="contain"
+            alt="image of website"
           />
-        </Link>
+        </a>
       </div>
     </div>
   );
@@ -49,7 +50,7 @@ const ProjectInfo = () => {
         <h4 className="text-l">
           <b>Adress</b>
         </h4>
-        <a href={URL} target="_blank">
+        <a href={URL} target="_blank" rel="noopener noreferrer">
           {URL}
         </a>
       </div>

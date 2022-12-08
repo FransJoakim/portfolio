@@ -4,7 +4,6 @@ import portfolioProjects from "../../data.json" assert { type: "json" };
 import styles from "../../styles/Home.module.scss";
 import Display from "./Display";
 import Menu from "./Menu";
-import BracketAnimation from "../BracketAnimation";
 import { clientWindowViewState } from "../../pages/index";
 
 export interface portfolioProject {
@@ -46,7 +45,7 @@ const Portfolio = () => {
     } else if (num < 1700) {
       setDisplayedProject(portfolioProjects[4]);
     }
-  }, [clientWindowView]);
+  }, [clientWindowView, setDisplayedProject]);
 
   return (
     <section className={styles.portfolio}>

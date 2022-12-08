@@ -6,7 +6,7 @@ const About = () => {
     <section className="fixed w-full h-full flex justify-end">
       <div className="w-6/12 h-full flex flex-col justify-between mr-16 p-12">
         <div className="flex w-3/4 mt-10 justify-between items-start">
-          <Image src="/me.png" height="210em" width="210em" />
+          <Image src="/me.png" height="210em" width="210em" alt="" />
           <Info />
         </div>
         <TechStack />

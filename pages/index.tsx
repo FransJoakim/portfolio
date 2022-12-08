@@ -16,15 +16,15 @@ export const clientWindowViewState = atom({
 const Home: NextPage = () => {
   const setClientWindowView = useSetRecoilState(clientWindowViewState);
 
-  useEffect(() => {
-    // setClientWindowView(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const handleScroll = () => {
     setClientWindowView(window.scrollY);
   };
+
+  useEffect(() => {
+    console.log(Date.now());
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   return (
     <div id={styles.page} className="flex-col h-screen">

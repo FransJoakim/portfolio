@@ -32,7 +32,11 @@ export const Card = ({ project }: { project: portfolioProject }) => {
       // onClick={() => setdisplayedProject(project)}
     >
       <div className={styles.card_image}>
-        <Image src={`/projectPhotos/${img}.png`} layout="fill" />
+        <Image
+          src={`/projectPhotos/${img}.png`}
+          layout="fill"
+          alt="Small image of website"
+        />
       </div>
 
       <div className={styles.card_text}>

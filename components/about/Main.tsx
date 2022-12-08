@@ -39,7 +39,7 @@ export function Main() {
         sectionRef.current.style.visibility = "hidden";
       }
     }
-  }, [clientWindowView]);
+  }, [clientWindowView, scrollEntryPoint]);
 
   return (
     <div ref={sectionRef}>
