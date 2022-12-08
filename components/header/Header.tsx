@@ -3,6 +3,7 @@ import { useRecoilValue } from "recoil";
 import { clientWindowViewState } from "../../pages";
 import classNames from "classnames";
 import { inViewAtom } from "../../features/ScrollPosition";
+import styles from "../../styles/Home.module.scss";
 
 export const Header = () => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
@@ -10,10 +11,13 @@ export const Header = () => {
 
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(60);
+  const [width, setWidth] = useState(6);
   const [boxShadow, setBoxShadow] = useState(0);
 
   useEffect(() => {
     let backgroundTransparacyVar = clientWindowView / 600;
+    let widthVar = 6 + backgroundTransparacyVar * 2;
+    setWidth(widthVar);
 
     if (backgroundTransparacyVar < 1) {
       let paddingVar = 60 - backgroundTransparacyVar * 30;
@@ -26,19 +30,19 @@ export const Header = () => {
 
   return (
     <header
+      className={styles.header}
       style={{
         background: `rgba(255, 255, 255, ${backgroundTransparacy - 0.4})`,
-        padding: `${padding}px 2rem 1rem 0`,
+        padding: `${padding}px ${width}rem 1rem 0`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
         zIndex: "100",
       }}
     >
-      <ul className="scrollSpyContainer">
+      <ul className={styles.scrollSpyContainer}>
         <li
-          className={classNames(
-            "spyItemClass",
-            inView === "about" ? "active" : null
-          )}
+          className={`${styles.spyItemClass} ${
+            inView === "about" ? styles.active : null
+          }`}
           key={"about"}
           onClick={() => {
             window.scroll(0, 0);
@@ -47,10 +51,9 @@ export const Header = () => {
           About
         </li>
         <li
-          className={classNames(
-            "spyItemClass",
-            inView === "portfolio" ? "active" : null
-          )}
+          className={`${styles.spyItemClass} ${
+            inView === "portfolio" ? styles.active : null
+          } ${inView === "about" ? styles.notActive : null}`}
           key={"portfolio"}
           onClick={() => {
             window.scroll(0, 500 + 200);
@@ -59,10 +62,9 @@ export const Header = () => {
           Portfolio
         </li>
         <li
-          className={classNames(
-            "spyItemClass",
-            inView === "contact" ? "active" : null
-          )}
+          className={`${styles.spyItemClass} ${
+            inView === "contact" ? styles.active : null
+          } ${inView === "about" ? styles.notActive : null}`}
           key={"contact"}
           onClick={() => {
             window.scroll(0, 2400 + 200);

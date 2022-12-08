@@ -23,20 +23,16 @@ const Info = () => {
       <h2 id="about" className="text-5xl font-thin">
         About
       </h2>
-      <p>
+      <p className="py-2">
         Full-stack <b>Web developer</b>
       </p>
-      {/* <div>
-        Experience working in <b>Edtech</b>;
-        <p className="text-sm">
-          Municipality of Oslo
-          <br />
-          The Norwegian Directorate of Education and Training (UDIR)
-          <br />
-          Unit - Directorate for ICT and joint services in higher education and
-          research
-        </p>
-      </div> */}
+      <p className="pt-5">
+        Passionate, <b>curious</b>, engaged
+      </p>
+      <p className="pt-3">
+        <b>Experienced</b> working in Edtech
+      </p>
+      <p className="">operations, and support</p>
     </div>
   );
 };

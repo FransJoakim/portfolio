@@ -40,33 +40,11 @@ a {
   background-color: red;
 }
 
-header {
-  left: 12px;
-  position: fixed;
-
-  .scrollSpyContainer {
-    display: flex;
-  }
-}
-
 ul li {
   list-style-type: none;
 }
 
-.spyItemClass {
-  color: gray;
-  padding: 4px;
-}
-
-.spyItemClass:hover {
-  cursor: pointer;
-}
-
-.active {
-  font-weight: bold;
-  color: black;
-}
-
+////////////////////////////////
 .bg_animation {
   width: 100%;
   height: 100%;

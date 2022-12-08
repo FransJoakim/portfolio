@@ -21,6 +21,7 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
+    window.scroll(0, 0);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
@@ -29,9 +30,6 @@ const Home: NextPage = () => {
     <div id={styles.page} className="flex-col h-screen">
       <Header />
       <Main />
-      {/* <ScrollPosition scrollEntryPoint={-500} scrollExitPoint={300}>
-        <Main />
-      </ScrollPosition> */}
       <ScrollPosition
         scrollEntryPoint={500}
         scrollExitPoint={2300}
@@ -40,7 +38,7 @@ const Home: NextPage = () => {
         <Portfolio />
       </ScrollPosition>
       <ScrollPosition
-        scrollEntryPoint={2400}
+        scrollEntryPoint={2300}
         scrollExitPoint={3000}
         name="contact"
       >

@@ -3,6 +3,51 @@
 
   // https://www.sliderrevolution.com/resources/css-animated-background/
 
+  .header {
+    left: 12px;
+    position: fixed;
+
+    .scrollSpyContainer {
+      display: flex;
+      margin-left: 2rem;
+
+      .spyItemClass {
+        padding: 4px;
+      }
+
+      .spyItemClass:hover {
+        cursor: pointer;
+      }
+
+      .active {
+        font-weight: bold;
+        color: black;
+      }
+
+      .notActive {
+        animation: color-change 15s infinite;
+      }
+
+      @keyframes color-change {
+        0% {
+          color: black;
+        }
+        30% {
+          color: rgb(183, 183, 183);
+        }
+        40% {
+          color: #bfd8d5;
+        }
+        60% {
+          color: rgb(184, 183, 183);
+        }
+        100% {
+          color: black;
+        }
+      }
+    }
+  }
+
   $container-size: 45vw;
   $squares-count: 5;
 
@@ -173,31 +218,31 @@
     height: 80vh;
     padding: 0 4rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
 
     .displayedProject {
       padding: 1rem 2rem;
       width: 100%;
-      height: 55%;
+      height: 95%;
       flex-grow: 7;
       flex-basis: 7;
       flex-shrink: 10;
       display: flex;
       justify-content: space-between;
-      background: rgba(255, 255, 255, 0.7);
+      // background: rgba(255, 255, 255, 0.7);
 
       .projectInfo {
-        // background-color: #9fd3c7;
+        width: 50%;
+        padding: 1rem;
 
         &_description {
           margin: 1rem 0;
-          font-size: large;
+          font-size: 1.1rem;
         }
       }
 
       &_image {
-        height: 93%;
+        height: 52%;
         width: 55%;
         position: relative;
         display: flex;
@@ -208,19 +253,29 @@
     }
 
     .menu {
-      padding: 0 2rem;
-      width: 100%;
-      height: 30%;
+      padding: 2rem 2rem;
+      width: 19%;
+      height: 98%;
       display: flex;
-      background: rgba(255, 255, 255, 0.7);
-      // overflow-x: scroll;
-      // overflow-y: hidden;
-      // white-space: nowrap;
+      flex-direction: column;
+      align-items: end;
+      margin-right: -0.8rem;
+
+      &_background {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: rgba(200, 216, 219, 0.3);
+        height: 100vh;
+        width: 22vw;
+        z-index: -1;
+        // opacity: 0.5;
+      }
 
       .card {
-        margin-top: -0.5rem;
-        height: 90%;
-        width: 20%;
+        margin-top: 0.5rem;
+        height: 80%;
+        width: 100%;
         display: inline-flex;
         margin-right: 0.8rem;
         margin-bottom: 0.5rem;
@@ -247,7 +302,7 @@
 
         &_text {
           color: black;
-          height: 30%;
+          height: 40%;
           width: 100%;
           display: flex;
           flex-direction: column;
@@ -255,7 +310,7 @@
           opacity: 100%;
 
           &_title {
-            font-size: 1.2rem;
+            font-size: 1rem;
           }
 
           &_date {
@@ -265,9 +320,8 @@
       }
 
       #displayed_card {
-        margin-top: -1.8rem;
-        width: 25%;
-        height: 105%;
+        width: 110%;
+        height: 90%;
         filter: opacity(100%);
       }
     }
@@ -297,6 +351,8 @@
     transform: translate(-50%, -50%);
 
     h2 {
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
       font-size: 2rem;
     }
 
@@ -313,6 +369,14 @@
       width: 100%;
       padding: 1.2rem;
       font-size: larger;
+    }
+
+    button {
+      --tw-bg-opacity: 1;
+      background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.2em;
     }
   }
 }

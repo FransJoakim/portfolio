@@ -13,7 +13,10 @@ export interface portfolioProject {
   description: string;
   img: string;
   URL: string;
+  publicRepo: string;
+  publicRepo2?: string;
   date: string;
+  breakpoint: number;
 }
 
 export const projectsAtom = atom<portfolioProject[]>({
@@ -36,11 +39,11 @@ const Portfolio = () => {
 
     if (num < 500) {
       setDisplayedProject(portfolioProjects[0]);
-    } else if (num < 800) {
+    } else if (num < 900) {
       setDisplayedProject(portfolioProjects[1]);
-    } else if (num < 1100) {
+    } else if (num < 1250) {
       setDisplayedProject(portfolioProjects[2]);
-    } else if (num < 1400) {
+    } else if (num < 1600) {
       setDisplayedProject(portfolioProjects[3]);
     }
     // else if (num < 1700) {

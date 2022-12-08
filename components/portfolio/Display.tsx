@@ -24,15 +24,25 @@ export default function Display() {
 }
 
 const ProjectInfo = () => {
-  const { title, description, technologies, date, type, URL } =
-    useRecoilValue(displayedProjectAtom);
+  const {
+    title,
+    description,
+    technologies,
+    date,
+    type,
+    URL,
+    publicRepo,
+    publicRepo2,
+  } = useRecoilValue(displayedProjectAtom);
   return (
     <div className={styles.projectInfo}>
       <p>Project:</p>
       <h2 className="text-4xl">{title}</h2>
-      <p>{type}</p>
+      <p>
+        {type} : {date}
+      </p>
       <p className={styles.projectInfo_description}>{description}</p>
-      <h3 className="text-2xl">
+      <h3 className="text-l">
         <b>Tech</b>
       </h3>
       <p>
@@ -40,19 +50,29 @@ const ProjectInfo = () => {
           return <span key={tech}>{tech + ", "}</span>;
         })}
       </p>
-      <div className="mt-2">
-        <h4 className="text-l">
-          <b>Published</b>
-        </h4>
-        <p>{date}</p>
+      <div className="mt-12">
+        <h3 className="text-l">
+          <b>Available at</b>
+        </h3>
+        <a href={URL} target="_blank" rel="noopener noreferrer">
+          <u>{URL}</u>
+        </a>
       </div>
       <div className="mt-2">
-        <h4 className="text-l">
-          <b>Adress</b>
-        </h4>
-        <a href={URL} target="_blank" rel="noopener noreferrer">
-          {URL}
+        <h3 className="text-l">
+          <b>Project repositor{!publicRepo2 ? "y" : "ies"}</b>
+        </h3>
+        <a href={publicRepo} target="_blank" rel="noopener noreferrer">
+          <u>{publicRepo}</u>
         </a>
+        {publicRepo2 && (
+          <>
+            <br />
+            <a href={publicRepo2} target="_blank" rel="noopener noreferrer">
+              <u>{publicRepo2}</u>
+            </a>
+          </>
+        )}
       </div>
     </div>
   );

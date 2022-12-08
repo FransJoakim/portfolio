@@ -3,36 +3,45 @@
     "title": "Kabal",
     "type": "Card game",
     "technologies": ["React", "Recoil", "React-DnD", "Tailwind"],
-    "description": "Card game, also known as Solitarie. A fun interactive project I made after having played the game whilst at my cabin. The main feature is an advanced form of state management using Recoil, which allows each card to be moved around without knowledge of the state of other cards in the stack",
+    "description": "Card game, also known as Solitarie. A fun though challenging project, featuring an advanced state management system. It treats each card as its own state, allowing cards to be moved with minimun knowledge of the state of other cards, just like in real life.",
     "img": "kabal",
     "URL": "https://kabal-psi.vercel.app/",
-    "date": "October 2022"
+    "publicRepo": "https://github.com/FransJoakim/solitaire_game_aka_kabal",
+    "date": "October 2022",
+    "breakpoint": 900
   },
   {
     "title": "Norwegian skiing",
     "type": "Website",
     "technologies": ["GatsbyJS", "Contentful", "GraphQL"],
-    "description": "",
+    "description": "A video portfolio site, requested made for a video-project. Utilizes Contentful as (headless) CMS to allow content editing by website owner. The site displayed here displays mock data however.",
     "img": "norwegianSkiing",
     "URL": "https://withoutfooter--majestic-boba-7f411f.netlify.app/",
-    "date": "September 2022"
+    "publicRepo": "https://github.com/FransJoakim/NorwegianSkiing",
+    "date": "September 2022",
+    "breakpoint": 1200
   },
   {
     "title": "Snake",
     "type": "Game",
     "technologies": ["HTML, CSS, JavaScript"],
-    "description": "",
+    "description": "A classic game that's great fun to make. Works on mobile, utilizing touch-events to calculate swipes. Has a retro HTML and classical Javascript code design",
     "img": "snake",
-    "URL": "/",
-    "date": "July 2022"
+    "URL": "https://divsnacks.web.app/",
+    "publicRepo": "https://github.com/FransJoakim/snake_game",
+    "date": "July 2022",
+    "breakpoint": 1400
   },
   {
     "title": "MyPrivateChef",
     "type": "Website",
     "technologies": ["React", "Firebase & Firestore"],
-    "description": "Final project at Salt bootcamp",
+    "description": "MyPrivateChef features a booking service for busy people wanting to hire a chef for a party and aims at connecting people with a passion for cooking and people who love food. The website was made as part of the final project at the Salt bootcamp.",
     "img": "myPrivateChef",
     "URL": "https://myprivatechef-finalproject.web.app/",
-    "date": "April 2022"
+    "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",
+    "publicRepo2": "https://github.com/FransJoakim/myprivatechef-salt-server",
+    "date": "April 2022",
+    "breakpoint": 1700
   }
 ]

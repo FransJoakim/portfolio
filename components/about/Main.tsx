@@ -15,10 +15,6 @@ export function Main() {
 
   useEffect(() => {
     if (sectionRef.current) {
-      if (clientWindowView < scrollEntryPoint) {
-        sectionRef.current.style.visibility = "hidden";
-      }
-
       if (
         clientWindowView > scrollEntryPoint &&
         clientWindowView < scrollExitPoint
@@ -43,7 +39,7 @@ export function Main() {
         sectionRef.current.style.visibility = "hidden";
       }
     }
-  }, [clientWindowView, scrollEntryPoint]);
+  }, [clientWindowView, scrollEntryPoint, setInView]);
 
   return (
     <div ref={sectionRef}>
