@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
+import { clientWindowViewState } from "../../pages";
 import styles from "../../styles/Home.module.scss";
 import {
   projectsAtom,
@@ -7,10 +8,10 @@ import {
   portfolioProject,
 } from "./Portfolio";
 
-export default function Menu() {
+export default function Menu({ inView }: { inView: boolean }) {
   const projects = useRecoilValue(projectsAtom);
   return (
-    <section className={styles.menu}>
+    <section className={styles.menu} style={{ display: inView ? "" : "none" }}>
       {projects.map((project) => (
         <Card project={project} key={project.title} />
       ))}
@@ -19,7 +20,7 @@ export default function Menu() {
 }
 
 export const Card = ({ project }: { project: portfolioProject }) => {
-  const { title, description, technologies, img, URL, date } = project;
+  const { title, img, date } = project;
   const displayedProject = useRecoilValue(displayedProjectAtom);
 
   const isDisplayed = title === displayedProject.title;

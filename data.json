@@ -1,5 +1,14 @@
 [
   {
+    "title": "Kabal",
+    "type": "Card game",
+    "technologies": ["React", "Recoil", "React-DnD", "Tailwind"],
+    "description": "Card game, also known as Solitarie, I made to practice game logic and state management",
+    "img": "card-tableau",
+    "URL": "/",
+    "date": "October 2022"
+  },
+  {
     "title": "MyPrivateChef",
     "type": "Website",
     "technologies": ["React", "Firebase & Firestore"],
@@ -18,29 +27,11 @@
     "date": "September 2022"
   },
   {
-    "title": "Solitarie/Kabal",
-    "type": "Game",
-    "technologies": ["React", "Recoil", "React-DnD", "Tailwind"],
-    "description": "Card game I made to practice game logic and state management",
-    "img": "card-tableau",
-    "URL": "/",
-    "date": "October 2022"
-  },
-  {
-    "title": "SkyeCV",
-    "type": "Game",
-    "technologies": ["HTML, CSS, JavaScript"],
-    "description": "",
-    "img": "card-tableau",
-    "URL": "/",
-    "date": "June 2022"
-  },
-  {
     "title": "Snake",
     "type": "Game",
     "technologies": ["HTML, CSS, JavaScript"],
     "description": "",
-    "img": "card-tableau",
+    "img": "snake",
     "URL": "/",
     "date": "July 2022"
   }

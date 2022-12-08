@@ -338,23 +338,14 @@ $green: #9fd3c7;
   z-index: -100;
 }
 
-$total: 5;
+$total: 2;
 @for $i from 1 through $total {
   $scale: random(2) - 0.4;
 
   .svg:nth-child(#{$i}) {
-    left: random(120) * 2% - 20;
-    animation: raise#{$i} 2 + random(5) + s linear infinite;
-    animation-delay: random(200) - 5 + s;
-    transform: scale(0.1 * $i - 0.1) rotate(random(360) + deg);
+    left: 0.5 * 2% - 20;
+    transform: scale(0.5 * $i - 0.1) rotate(random(360) + deg);
     z-index: $i - 7;
     filter: blur($i - 6 + px);
-
-    @keyframes raise#{$i} {
-      to {
-        bottom: 150vh;
-        transform: scale(1 * $i - 1) rotate(random(360) + deg);
-      }
-    }
   }
 }
