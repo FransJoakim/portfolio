@@ -30,21 +30,23 @@
 
       @keyframes color-change {
         0% {
+          color: rgb(47, 46, 46);
+        }
+        50% {
           color: black;
-        }
-        30% {
-          color: rgb(183, 183, 183);
-        }
-        40% {
-          color: #bfd8d5;
-        }
-        60% {
-          color: rgb(184, 183, 183);
+          font-weight: 400;
         }
         100% {
-          color: black;
+          color: rgb(47, 46, 46);
         }
       }
+    }
+  }
+
+  #about {
+    .fontChange {
+      animation: color-change 15s infinite;
+      font-weight: 300;
     }
   }
 
