@@ -40,7 +40,7 @@ export const Card = ({ project }: { project: portfolioProject }) => {
       </div>
 
       <div className={styles.card_text}>
-        <p className={styles.card_text_title}>{title}</p>
+        <h4 className={styles.card_text_title}>{title}</h4>
         <p className={styles.card_text_date}>{date.toUpperCase()}</p>
       </div>
     </section>

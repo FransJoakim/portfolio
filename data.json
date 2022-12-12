@@ -2,7 +2,13 @@
   {
     "title": "Kabal",
     "type": "Card game",
-    "technologies": ["React", "Recoil", "React-DnD", "Tailwind"],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Recoil",
+      "React-DnD",
+      "TailwindCSS"
+    ],
     "description": "Card game, also known as Solitarie. A fun though challenging project, featuring an advanced state management system. It treats each card as its own state, allowing cards to be moved with minimun knowledge of the state of other cards, just like in real life.",
     "img": "kabal",
     "URL": "https://kabal-psi.vercel.app/",
@@ -13,29 +19,39 @@
   {
     "title": "Norwegian skiing",
     "type": "Website",
-    "technologies": ["GatsbyJS", "Contentful", "GraphQL"],
+    "technologies": ["GatsbyJS", "GraphQL", "Contentful"],
     "description": "A video portfolio site, requested made for a video-project. Utilizes Contentful as (headless) CMS to allow content editing by website owner. The site displayed here displays mock data however.",
     "img": "norwegianSkiing",
     "URL": "https://withoutfooter--majestic-boba-7f411f.netlify.app/",
     "publicRepo": "https://github.com/FransJoakim/NorwegianSkiing",
     "date": "September 2022",
-    "breakpoint": 1200
+    "breakpoint": 1100
+  },
+  {
+    "title": "CV Maker",
+    "type": "Web-application",
+    "technologies": ["React", "Redux", "pdfmake", "Tailwind"],
+    "description": "This was a project we worked on for the first weeks at Skyetec. While meant as an internal application, this was also a traning project.",
+    "img": "cvmaker",
+    "URL": "https://cv-maker-three.vercel.app/webapp/skyeCV",
+    "date": "Mai 2022 - Juni 2022",
+    "breakpoint": 1300
   },
   {
     "title": "Snake",
     "type": "Game",
     "technologies": ["HTML, CSS, JavaScript"],
-    "description": "A classic game that's great fun to make. Works on mobile, utilizing touch-events to calculate swipes. Has a retro HTML and classical Javascript code design",
+    "description": "A classic game that works on mobile as well as desktop",
     "img": "snake",
     "URL": "https://divsnacks.web.app/",
     "publicRepo": "https://github.com/FransJoakim/snake_game",
     "date": "July 2022",
-    "breakpoint": 1400
+    "breakpoint": 1500
   },
   {
     "title": "MyPrivateChef",
     "type": "Website",
-    "technologies": ["React", "Firebase & Firestore"],
+    "technologies": ["React", "TypeScript", "Firebase & Firestore"],
     "description": "MyPrivateChef features a booking service for busy people wanting to hire a chef for a party and aims at connecting people with a passion for cooking and people who love food. The website was made as part of the final project at the Salt bootcamp.",
     "img": "myPrivateChef",
     "URL": "https://myprivatechef-finalproject.web.app/",

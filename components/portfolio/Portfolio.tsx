@@ -13,7 +13,7 @@ export interface portfolioProject {
   description: string;
   img: string;
   URL: string;
-  publicRepo: string;
+  publicRepo?: string;
   publicRepo2?: string;
   date: string;
   breakpoint: number;
@@ -45,17 +45,13 @@ const Portfolio = () => {
       setDisplayedProject(portfolioProjects[2]);
     } else if (num < 1600) {
       setDisplayedProject(portfolioProjects[3]);
+    } else if (num < 1700) {
+      setDisplayedProject(portfolioProjects[4]);
     }
-    // else if (num < 1700) {
-    //   setDisplayedProject(portfolioProjects[4]);
-    // }
   }, [clientWindowView, setDisplayedProject]);
 
   return (
     <section className={styles.portfolio}>
-      <div id="portfolio" className="hidden">
-        Portfolio
-      </div>
       <div className={styles.portfolio_wrapper}>
         <Display />
         <Menu inView={inView} />

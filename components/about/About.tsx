@@ -33,12 +33,8 @@ const Info = () => {
       </p>
       <p className="pt-1">
         <b>Experienced</b>
-        <span className={styles.fontChange}>
-          {" "}
-          within operations and support
-        </span>
+        <span className={styles.fontChange}>within operations and support</span>
       </p>
-      <p className={`pt-1 ${styles.fontChange}`}>curious and engaged</p>
       <p className="pt-2">
         <span className={styles.fontChange}>Knowledgable about </span>
         <b>Edtech</b>

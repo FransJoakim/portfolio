@@ -1,11 +1,14 @@
 import { useRecoilValue } from "recoil";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../../styles/Home.module.scss";
 import { displayedProjectAtom } from "./Portfolio";
+import { useWindowSize } from "../../lib/utils";
 
 export default function Display() {
   const { img, URL } = useRecoilValue(displayedProjectAtom);
+  const size = useWindowSize();
+  if (!size) return null;
+
   return (
     <div className={styles.displayedProject}>
       <ProjectInfo />
@@ -13,9 +16,10 @@ export default function Display() {
         <a href={URL} target="_blank" rel="noopener noreferrer">
           <Image
             src={`/projectPhotos/${img}.png`}
-            layout="fill"
             objectFit="contain"
             alt="image of website"
+            height={`${size.height / 2.2}px`}
+            width={`${size.height / 1.3}px`}
           />
         </a>
       </div>
@@ -34,15 +38,20 @@ const ProjectInfo = () => {
     publicRepo,
     publicRepo2,
   } = useRecoilValue(displayedProjectAtom);
+  const size = useWindowSize();
+  if (!size) return null;
+
   return (
-    <div className={styles.projectInfo}>
-      <p>Project:</p>
+    <div
+      className={styles.displayedProject_info}
+      style={{ width: `${size.height / 1.3}px` }}
+    >
       <h2 className="text-4xl">{title}</h2>
       <p>
         {type} : {date}
       </p>
-      <p className={styles.projectInfo_description}>{description}</p>
-      <h3 className="text-l">
+      <p className={styles.displayedProject_info_description}>{description}</p>
+      {/* <h3 className="text-l">
         <b>Tech</b>
       </h3>
       <p>
@@ -73,7 +82,7 @@ const ProjectInfo = () => {
             </a>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
