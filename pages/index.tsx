@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { atom, useSetRecoilState } from "recoil";
 import type { NextPage } from "next";
 import { Header } from "../components/header/Header";
-import { Main } from "../components/about/Main";
+import About from "../components/about";
 import Portfolio from "../components/portfolio/Portfolio";
 import Contact from "../components/contact/Contact";
 import styles from "../styles/Home.module.scss";
@@ -29,16 +29,16 @@ const Home: NextPage = () => {
   return (
     <div id={styles.page} className="flex-col h-screen">
       <Header />
-      <Main />
+      <About />
       <ScrollPosition
         scrollEntryPoint={500}
-        scrollExitPoint={2300}
+        scrollExitPoint={1300}
         name="portfolio"
       >
         <Portfolio />
       </ScrollPosition>
       <ScrollPosition
-        scrollEntryPoint={2300}
+        scrollEntryPoint={1300}
         scrollExitPoint={3000}
         name="contact"
       >

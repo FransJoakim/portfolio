@@ -5,7 +5,7 @@ import About from "./About";
 import { BoxAnimation } from "../BoxAnimation";
 import { inViewAtom } from "../../features/ScrollPosition";
 
-export function Main() {
+export default function Main() {
   const clientWindowView = useRecoilValue(clientWindowViewState);
   const sectionRef = useRef<HTMLDivElement>(null);
   const setInView = useSetRecoilState(inViewAtom);

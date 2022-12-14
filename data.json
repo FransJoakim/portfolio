@@ -9,12 +9,11 @@
       "React-DnD",
       "TailwindCSS"
     ],
-    "description": "Card game, also known as Solitarie. A fun though challenging project, featuring an advanced state management system. It treats each card as its own state, allowing cards to be moved with minimun knowledge of the state of other cards, just like in real life.",
+    "description": "Card game, also known as Solitarie. A fun though challenging project, featuring an advanced state management system. It treats each card as its own state, allowing cards to be moved with minimun knowledge of the state of other cards.",
     "img": "kabal",
     "URL": "https://kabal-psi.vercel.app/",
     "publicRepo": "https://github.com/FransJoakim/solitaire_game_aka_kabal",
-    "date": "October 2022",
-    "breakpoint": 900
+    "date": "October 2022"
   },
   {
     "title": "Norwegian skiing",
@@ -24,8 +23,7 @@
     "img": "norwegianSkiing",
     "URL": "https://withoutfooter--majestic-boba-7f411f.netlify.app/",
     "publicRepo": "https://github.com/FransJoakim/NorwegianSkiing",
-    "date": "September 2022",
-    "breakpoint": 1100
+    "date": "September 2022"
   },
   {
     "title": "CV Maker",
@@ -34,8 +32,7 @@
     "description": "This was a project we worked on for the first weeks at Skyetec. While meant as an internal application, this was also a traning project.",
     "img": "cvmaker",
     "URL": "https://cv-maker-three.vercel.app/webapp/skyeCV",
-    "date": "Mai 2022 - Juni 2022",
-    "breakpoint": 1300
+    "date": "Mai 2022 - Juni 2022"
   },
   {
     "title": "Snake",
@@ -45,8 +42,7 @@
     "img": "snake",
     "URL": "https://divsnacks.web.app/",
     "publicRepo": "https://github.com/FransJoakim/snake_game",
-    "date": "July 2022",
-    "breakpoint": 1500
+    "date": "July 2022"
   },
   {
     "title": "MyPrivateChef",
@@ -57,7 +53,6 @@
     "URL": "https://myprivatechef-finalproject.web.app/",
     "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",
     "publicRepo2": "https://github.com/FransJoakim/myprivatechef-salt-server",
-    "date": "April 2022",
-    "breakpoint": 1700
+    "date": "April 2022"
   }
 ]
