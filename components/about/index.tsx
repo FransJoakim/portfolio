@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { clientWindowViewState } from "../../pages/index";
 import About from "./About";
-import { BoxAnimation } from "../BoxAnimation";
 import { inViewAtom } from "../../features/ScrollPosition";
 
 export default function Main() {
@@ -43,7 +42,6 @@ export default function Main() {
 
   return (
     <div ref={sectionRef}>
-      <BoxAnimation />
       <About />
     </div>
   );

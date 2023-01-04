@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { clientWindowViewState } from "../../pages";
-import classNames from "classnames";
 import { inViewAtom } from "../../features/ScrollPosition";
 import styles from "../../styles/Home.module.scss";
 

@@ -1,11 +1,189 @@
 #about {
-  .fontChange {
-    animation: color-change 15s infinite;
-    font-weight: 300;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+
+  #profilePicture {
+    min-width: 190px;
+  }
+
+  .profileInfo_text {
+    font-size: 1.1rem;
+  }
+
+  .profileInfo_text p {
+    margin-bottom: -0.3rem;
+  }
+
+  .profileInfo_img {
+    margin-top: 1.5rem;
+    width: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 4rem;
+    padding: 3rem;
+
+    .fontChange {
+      animation: color-change 15s infinite;
+      font-weight: 300;
+    }
+
+    .stackIcon {
+      filter: saturate(90%);
+
+      &:hover {
+        filter: saturate(102%);
+        transform: scale(1.2);
+      }
+      .altText {
+        position: absolute !important;
+        background-color: #353535;
+        color: #fff;
+        padding: 0.5rem 0.5rem;
+        border-radius: 6px;
+        // width: max-content;
+        font-size: 0.8rem;
+        z-index: 500;
+        margin-right: 30px;
+        bottom: 30%;
+        right: 53%;
+
+        &::after {
+          content: "";
+          position: absolute;
+          border-width: 8px;
+          border-style: solid;
+          border-color: #353535 transparent transparent transparent;
+          margin-right: 15px;
+          transform: rotate(-90deg);
+          top: 30%;
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1350px) {
+    .container {
+      margin-right: 2rem;
+    }
+  }
+  @media (max-width: 1300px) {
+    .container {
+      margin-right: 1rem;
+    }
+  }
+  @media (max-width: 1250px) {
+    .container {
+      margin-right: 0;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  #about {
+    justify-content: start;
+    margin-top: 10vh;
+
+    .container {
+      width: 50rem;
+      padding: 4rem;
+      align-items: center;
+
+      #techStack {
+        position: absolute;
+        top: calc(55rem - calc(60vw / 1.2));
+        width: 70vw;
+
+        #lastRow {
+          position: absolute;
+          flex-direction: column;
+          margin-left: 47vw;
+        }
+
+        #lastRow div {
+          height: 4rem;
+        }
+      }
+    }
   }
 }
 
-$container-size: 45vw;
+@media (max-width: 945px) {
+  #profile {
+    flex-direction: column;
+
+    .profileInfo_text {
+      display: none;
+    }
+    .profileInfo_img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 945px) {
+  #about {
+    .container {
+      #techStack {
+        top: 45vh;
+        width: 80vw;
+
+        #lastRow {
+          position: relative;
+          flex-direction: row;
+          margin-left: 0;
+        }
+
+        #lastRow div {
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 775px) {
+  #about {
+    justify-content: center;
+
+    .container {
+      padding: 2rem;
+
+      #profile {
+        align-items: center;
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #about {
+    .container {
+      padding: 1rem;
+
+      #profile {
+        margin-top: 4rem;
+      }
+
+      #techStack {
+        width: 90vw;
+      }
+    }
+  }
+}
+
+$container-size: 80vh;
 $squares-count: 5;
 
 $square-size: $container-size/$squares-count;
@@ -14,9 +192,8 @@ $squares-padding: 0;
 
 $animation-time: 25s;
 $animation-curve: cubic-bezier(1, 0.5, 0.25, 0.5);
-// $animation-curve: ease-in-out;
 
-.container {
+.BoxAnimation_container {
   transform: translate(-50%, -50%);
   height: $container-size;
   width: $container-size;
@@ -99,6 +276,36 @@ $animation-curve: cubic-bezier(1, 0.5, 0.25, 0.5);
   }
 }
 
+@media (max-width: 1350px) {
+  .BoxAnimation_container {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .BoxAnimation_container {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .BoxAnimation_container {
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .BoxAnimation_container {
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .BoxAnimation_container {
+    display: none;
+  }
+}
+
 @keyframes rotate-right {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -151,36 +358,104 @@ $animation-curve: cubic-bezier(1, 0.5, 0.25, 0.5);
   }
 }
 
-.stackIcon {
-  filter: saturate(90%);
-
-  &:hover {
-    filter: saturate(102%);
-    transform: scale(1.2);
+@media (max-width: 1100px) {
+  #smallBoxAnimation {
+    visibility: visible;
+    display: block;
+    top: calc(66rem - calc(60vw / 1.2));
+    left: 99vw;
   }
-  .altText {
-    position: absolute !important;
-    background-color: #353535;
-    color: #fff;
-    padding: 0.5rem 0.5rem;
-    border-radius: 6px;
-    // width: max-content;
-    font-size: 0.8rem;
-    z-index: 500;
-    margin-right: 30px;
-    bottom: 30%;
-    right: 53%;
+}
 
-    &::after {
-      content: "";
-      position: absolute;
-      border-width: 8px;
-      border-style: solid;
-      border-color: #353535 transparent transparent transparent;
-      margin-right: 15px;
-      transform: rotate(-90deg);
-      top: 30%;
-      left: 100%;
+@media (max-width: 775px) {
+  #smallBoxAnimation {
+    visibility: hidden;
+  }
+}
+
+$smallcontainer-size: 45rem;
+$smallsquare-size: $smallcontainer-size/$squares-count;
+$smalllines-size: $smallsquare-size/$squares-count;
+
+.SmallBoxAnimation_container {
+  transform: translate(-50%, -50%);
+  height: $smallcontainer-size;
+  width: $smallcontainer-size;
+  position: fixed;
+  left: 33%;
+  top: 75%;
+
+  .row {
+    position: relative;
+    float: left;
+    width: 100%;
+    clear: both;
+
+    .loader {
+      position: relative;
+      display: inline-block;
+      height: $smallsquare-size;
+      width: $smallsquare-size;
+      float: left;
+
+      .lines {
+        bottom: $squares-padding;
+        right: $squares-padding;
+        left: $squares-padding;
+        top: $squares-padding;
+        position: absolute;
+
+        span {
+          animation: shift-background $animation-time infinite $animation-curve;
+          background-color: white;
+          position: absolute;
+          width: $smalllines-size;
+          height: 3px;
+          &::before {
+            background-color: inherit;
+            height: $smalllines-size;
+            position: absolute;
+            content: "";
+            width: 3px;
+          }
+          &:nth-child(1),
+          &:nth-child(4),
+          &:nth-child(1)::before,
+          &:nth-child(4)::before {
+            left: 0;
+          }
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(2)::before,
+          &:nth-child(3)::before {
+            right: 0;
+          }
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(1)::before,
+          &:nth-child(2)::before {
+            top: 0;
+          }
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(3)::before,
+          &:nth-child(4)::before {
+            bottom: 0;
+          }
+        }
+      }
+    }
+    &:nth-child(even) > .loader:nth-child(even) > .lines {
+      animation: rotate-right $animation-time infinite $animation-curve;
+    }
+    &:nth-child(even) > .loader:nth-child(odd) > .lines {
+      animation: rotate-left $animation-time infinite $animation-curve;
+    }
+    &:nth-child(odd) > .loader:nth-child(even) > .lines {
+      animation: rotate-left $animation-time infinite $animation-curve;
+    }
+    &:nth-child(odd) > .loader:nth-child(odd) > .lines {
+      animation: rotate-right $animation-time infinite $animation-curve;
     }
   }
 }

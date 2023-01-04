@@ -50,3 +50,19 @@
     }
   }
 }
+
+@media (max-width: 1100px) {
+  .contact {
+    .form {
+      width: 570px;
+    }
+  }
+}
+
+@media (max-width: 725px) {
+  .contact {
+    .form {
+      width: 85%;
+    }
+  }
+}
