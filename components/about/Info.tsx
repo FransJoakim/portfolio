@@ -1,5 +1,6 @@
 import styles from "../../styles/About.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Info = () => {
   return (
@@ -28,18 +29,24 @@ const Info = () => {
           <p className=""></p>
         </div>
         <div className={styles.profileInfo_img}>
-          <Image
-            src="/icons/github.png"
-            height="40em"
-            width="40em"
-            alt="github link"
-          />
-          <Image
-            src="/icons/linkedin.png"
-            height="40em"
-            width="40em"
-            alt="github link"
-          />
+          <Link href="https://github.com/FransJoakim">
+            <Image
+              src="/icons/github.png"
+              height="45em"
+              width="45em"
+              alt="github link"
+              className={styles.link}
+            />
+          </Link>
+          <Link href="https://www.linkedin.com/in/fransjoakimloitegaardtitulaer/">
+            <Image
+              src="/icons/linkedin.png"
+              height="45em"
+              width="45em"
+              alt="github link"
+              className={styles.link}
+            />
+          </Link>
         </div>
       </div>
     </div>

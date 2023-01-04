@@ -28,7 +28,7 @@
   {
     "title": "CV Maker",
     "type": "Web-application",
-    "technologies": ["React", "Redux", "pdfmake", "Tailwind"],
+    "technologies": ["TypeScript", "React", "Redux", "pdfmake", "Tailwind"],
     "description": "This was a project we worked on for the first weeks at Skyetec. While meant as an internal application, this was also a traning project.",
     "img": "cvmaker",
     "URL": "https://cv-maker-three.vercel.app/webapp/skyeCV",
@@ -38,17 +38,27 @@
     "title": "Snake",
     "type": "Game",
     "technologies": ["HTML, CSS, JavaScript"],
-    "description": "A classic game that works on mobile as well as desktop",
+    "description": "A classic game, that's just as fun to play as to make. The game works both on mobile and desktop",
     "img": "snake",
     "URL": "https://divsnacks.web.app/",
     "publicRepo": "https://github.com/FransJoakim/snake_game",
     "date": "July 2022"
   },
   {
+    "title": "Movie title time series",
+    "type": "Mini project",
+    "technologies": ["TypeScript", "React", "SASS"],
+    "description": "A fun small project, made for a job interview. Displays movie titles with common names on a timeline",
+    "img": "movie-title-time-series",
+    "URL": "https://movie-title-time-series.vercel.app/",
+    "publicRepo": "https://github.com/FransJoakim/movie-title-time-series",
+    "date": "Desember 2022"
+  },
+  {
     "title": "MyPrivateChef",
     "type": "Website",
     "technologies": ["React", "TypeScript", "Firebase & Firestore"],
-    "description": "MyPrivateChef features a booking service for busy people wanting to hire a chef for a party and aims at connecting people with a passion for cooking and people who love food. The website was made as part of the final project at the Salt bootcamp.",
+    "description": "MyPrivateChef features a fictional booking service for busy people wanting to hire a chef, such as for a party. The website was made as a final project at the Salt bootcamp.",
     "img": "myPrivateChef",
     "URL": "https://myprivatechef-finalproject.web.app/",
     "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",

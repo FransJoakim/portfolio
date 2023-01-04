@@ -1,5 +1,5 @@
 import { atom, useRecoilValue } from "recoil";
-import portfolioProjects from "../../data.json" assert { type: "json" };
+import portfolioProjects from "../../lib/data.json" assert { type: "json" };
 import styles from "../../styles/Portfolio.module.scss";
 import { clientWindowViewState } from "../../pages/index";
 import { useWindowSize } from "../../lib/utils";
