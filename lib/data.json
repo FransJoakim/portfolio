@@ -48,7 +48,7 @@
     "title": "MyPrivateChef",
     "type": "Website",
     "technologies": ["React", "TypeScript", "Firebase & Firestore"],
-    "description": "MyPrivateChef features a fictional booking service for busy people wanting to hire a chef for a party or other services. The website was made as the final project at the Salt bootcamp.",
+    "description": "MyPrivateChef features a booking service for busy people wanting to hire a chef for a party and aims at connecting people with a passion for cooking and people who love food. The website was made as part of the final project at the Salt bootcamp.",
     "img": "myPrivateChef",
     "URL": "https://myprivatechef-finalproject.web.app/",
     "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",

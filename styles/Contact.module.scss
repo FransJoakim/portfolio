@@ -1,0 +1,52 @@
+.contact {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    width: 50%;
+    height: 51%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    h2 {
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    input {
+      height: 2rem;
+      width: 100%;
+      padding: 1.1rem;
+      font-size: larger;
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      height: 10rem;
+      width: 100%;
+      padding: 1.2rem;
+      font-size: larger;
+    }
+
+    button {
+      --tw-bg-opacity: 1;
+      background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.2em;
+    }
+  }
+}

@@ -1,10 +1,8 @@
-import { useEffect } from "react";
-import { atom, useRecoilValue, useSetRecoilState } from "recoil";
+import { atom, useRecoilValue } from "recoil";
 import portfolioProjects from "../../data.json" assert { type: "json" };
 import styles from "../../styles/Home.module.scss";
 import { clientWindowViewState } from "../../pages/index";
 import { useWindowSize } from "../../lib/utils";
-import Image from "next/image";
 
 export interface portfolioProject {
   title: string;
@@ -30,25 +28,8 @@ export const displayedProjectAtom = atom<portfolioProject>({
 
 const Portfolio = () => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
-  // const setDisplayedProject = useSetRecoilState(displayedProjectAtom);
   const inView = clientWindowView > 500;
   const projects = useRecoilValue(projectsAtom);
-
-  // useEffect(() => {
-  //   const num = -500 + clientWindowView;
-
-  //   if (num < 500) {
-  //     setDisplayedProject(portfolioProjects[0]);
-  //   } else if (num < 900) {
-  //     setDisplayedProject(portfolioProjects[1]);
-  //   } else if (num < 1250) {
-  //     setDisplayedProject(portfolioProjects[2]);
-  //   } else if (num < 1600) {
-  //     setDisplayedProject(portfolioProjects[3]);
-  //   } else if (num < 1700) {
-  //     setDisplayedProject(portfolioProjects[4]);
-  //   }
-  // }, [clientWindowView, setDisplayedProject]);
 
   return (
     <section

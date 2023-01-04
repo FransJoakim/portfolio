@@ -62,17 +62,17 @@ export const TechStack = () => {
       <div className="flex flex-col w-full gap-y-2">
         <div className="flex w-full justify-between items-center relative">
           <TechIcon name="Typescript" width={0.8} />
-          <TechIcon name="JavaScript" src="JS" width={0.8} />
+          <TechIcon name="JavaScript" width={0.8} />
           <TechIcon name="HTML" height={0.9} />
           <TechIcon name="CSS" height={0.9} />
-          <TechIcon name="Webpack" />
+          <TechIcon name="Python" height={0.8} />
         </div>
         <div className="flex w-full justify-between items-center">
           <TechIcon name="React" width={0.8} />
           <TechIcon name="Redux" width={2} />
           <TechIcon name="Recoil" width={1.3} height={0.75} />
           <TechIcon name="Next" width={2} height={0.8} />
-          <TechIcon name="Gatsby" height={0.75} />
+          <TechIcon name="Webpack" height={0.8} />
         </div>
         <div className="flex w-full justify-between items-center">
           <TechIcon name="SASS" width={0.9} />
