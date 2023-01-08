@@ -101,11 +101,11 @@ export const ScrollPosition = ({
 export const sendMail = async (email: string, message: string) => {
   if (!process.env.NEXT_PUBLIC_SERVER_URL) return console.log("@notSendMail");
   console.log("@sendMail");
-  const response = await fetch(process.env.NEXT_PUBLIC_SERVER_URL, {
+  const response = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + "/api", {
     method: "POST",
-    // mode: "cors",
-    // cache: "no-cache",
-    // credentials: "same-origin",
+    mode: "cors",
+    cache: "no-cache",
+    credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
     },
