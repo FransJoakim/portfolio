@@ -103,9 +103,9 @@ export const sendMail = async (email: string, message: string) => {
   console.log("@sendMail");
   const response = await fetch(process.env.NEXT_PUBLIC_SERVER_URL, {
     method: "POST",
-    mode: "cors",
-    cache: "no-cache",
-    credentials: "same-origin",
+    // mode: "cors",
+    // cache: "no-cache",
+    // credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
     },
