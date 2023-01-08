@@ -11,6 +11,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  res.status(200).json({ name: "FRANS HETER JEG" });
   // const status = await sendMail(req.body.email, req.body.message);
   // if (status instanceof Error) res.status(200).json({ name: status.message });
   nodeoutlook.sendEmail({
