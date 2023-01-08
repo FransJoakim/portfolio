@@ -10,7 +10,7 @@ const Contact = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     sendMail(email, message);
-    setHasSubmitted(true);
+    // setHasSubmitted(true);
   };
 
   return (
