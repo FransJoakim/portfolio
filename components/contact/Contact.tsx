@@ -47,7 +47,7 @@ const Contact = () => {
         <div className={styles.form}>
           <h2>Thank you!</h2>
           <p>
-            An email was sent to your email ({email}) and myself
+            An email was sent to your email ({confirmedEmail}) and myself
             (fransjlt@gmail.com). I will be in touch soon.
           </p>
           <p className="text-xs mt-2">
