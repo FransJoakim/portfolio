@@ -1,33 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodeMailer from "nodemailer";
-// var nodeoutlook = require("nodejs-nodemailer-outlook");
-
-type Data = {
-  name: string;
-};
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse
 ) {
-  console.log("here recieving requests...");
   const status = await sendMail(req.body.email, req.body.message);
   if (status instanceof Error) res.status(200).json({ name: status.message });
-  // nodeoutlook.sendEmail({
-  //   auth: {
-  //     user: "fransjoakim@outlook.com",
-  //     pass: "fNg8ccjvsYcE6aepWd74",
-  //   },
-  //   from: "fransjoakim@outlook.com",
-  //   to: "fransjlt@gmail.com",
-  //   subject: "Hey you, awesome!",
-  //   html: "<b>This is bold text</b>",
-  //   text: "This is text version!",
-  //   replyTo: "fransjoakim@outlook.com",
-  //   onError: () => console.log("error"),
-  //   onSuccess: () => console.log("success"),
-  // });
 }
 
 const sendMail = async (

@@ -4,13 +4,17 @@ import { useState } from "react";
 
 const Contact = () => {
   const [email, setEmail] = useState<string>("");
+  const [confirmedEmail, setConfirmedEmail] = useState("");
   const [message, setMessage] = useState<string>("");
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     sendMail(email, message);
-    // setHasSubmitted(true);
+    setHasSubmitted(true);
+    setConfirmedEmail(email);
+    setMessage("");
+    setEmail("");
   };
 
   return (
