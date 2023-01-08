@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { clientWindowViewState } from "../../pages/index";
 import About from "./About";
-import { inViewAtom } from "../../features/ScrollPosition";
+import { inViewAtom } from "../../lib/utils";
 
 export default function Main() {
   const clientWindowView = useRecoilValue(clientWindowViewState);

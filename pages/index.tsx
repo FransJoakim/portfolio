@@ -6,7 +6,7 @@ import About from "../components/about";
 import Portfolio from "../components/portfolio/Portfolio";
 import Contact from "../components/contact/Contact";
 import styles from "../styles/Home.module.scss";
-import ScrollPosition from "../features/ScrollPosition";
+import { ScrollPosition } from "../lib/utils";
 
 export const clientWindowViewState = atom({
   key: "clientWindowView",

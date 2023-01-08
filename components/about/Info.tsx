@@ -32,8 +32,8 @@ const Info = () => {
           <Link href="https://github.com/FransJoakim">
             <Image
               src="/icons/github.png"
-              height="45em"
-              width="45em"
+              height="40em"
+              width="40em"
               alt="github link"
               className={styles.link}
             />
@@ -41,8 +41,8 @@ const Info = () => {
           <Link href="https://www.linkedin.com/in/fransjoakimloitegaardtitulaer/">
             <Image
               src="/icons/linkedin.png"
-              height="45em"
-              width="45em"
+              height="40em"
+              width="40em"
               alt="github link"
               className={styles.link}
             />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { clientWindowViewState } from "../../pages";
-import { inViewAtom } from "../../features/ScrollPosition";
+import { inViewAtom } from "../../lib/utils";
 import styles from "../../styles/Home.module.scss";
 
 export const Header = () => {
