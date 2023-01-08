@@ -24,9 +24,9 @@ const sendMail = async (
 
   const options = {
     from: "franskoder@gmail.com",
-    to: [email, "fransjlt@gmail.com", "fransjoakim@outlook.com"],
+    to: [email, "fransjlt@gmail.com"],
     subject: `Portfolio site contact: ${email}`,
-    text: `sent message via portfolio site`,
+    text: `${email} sent message via portfolio site`,
     html: `<p>${email} sent you the following message via your portfolio site:</p>
           <p>${message}</p>`,
   };
