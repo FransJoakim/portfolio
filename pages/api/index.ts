@@ -11,7 +11,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  // res.status(200).json({ name: "FRANS HETER JEG" });
+  console.log("here recieving requests...");
   const status = await sendMail(req.body.email, req.body.message);
   if (status instanceof Error) res.status(200).json({ name: status.message });
   // nodeoutlook.sendEmail({
@@ -38,7 +38,7 @@ const sendMail = async (
     service: "gmail",
     auth: {
       user: "franskoder@gmail.com",
-      pass: "vxngvzbfxstautpf",
+      pass: process.env.EMAIL_PASS,
     },
   });
 
