@@ -111,5 +111,5 @@ export const sendMail = async (email: string, message: string) => {
     },
     body: JSON.stringify({ email, message }),
   });
-  console.log(await response.json());
+  console.log(await response);
 };
