@@ -16,6 +16,16 @@
     "date": "October 2022"
   },
   {
+    "title": "Mock TV program guide",
+    "type": "Web-application",
+    "technologies": ["React", "TypeScript", "TailwindCSS"],
+    "description": "An mock Electronic Programe Guide (EPG) that allows you to find the 'current' shows. A project made as part of a job application process",
+    "img": "tvProgramGuide",
+    "URL": "https://tv-program-guide.vercel.app/",
+    "publicRepo": "https://github.com/FransJoakim/TV-program-guide-Norigin",
+    "date": "January 2023"
+  },
+  {
     "title": "Norwegian skiing",
     "type": "Website",
     "technologies": ["GatsbyJS", "GraphQL", "Contentful"],
@@ -35,10 +45,21 @@
     "date": "Mai 2022 - Juni 2022"
   },
   {
+    "title": "MyPrivateChef",
+    "type": "Website",
+    "technologies": ["React", "TypeScript", "Firebase & Firestore"],
+    "description": "MyPrivateChef features a fictional booking service for busy people wanting to hire a chef, such as for a party. The website was made as a final project at the Salt bootcamp.",
+    "img": "myPrivateChef",
+    "URL": "https://myprivatechef-finalproject.web.app/",
+    "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",
+    "publicRepo2": "https://github.com/FransJoakim/myprivatechef-salt-server",
+    "date": "April 2022"
+  },
+  {
     "title": "Movie title time-series",
     "type": "Mini project",
     "technologies": ["TypeScript", "React", "SASS"],
-    "description": "A fun small project, made for a job interview. Displays movie titles with common names on a timeline",
+    "description": "Search for words in movietitles and see the result on an interactive timeline. A fun small project, made for a job application process.",
     "img": "movie-title-time-series",
     "URL": "https://movie-title-time-series.vercel.app/",
     "publicRepo": "https://github.com/FransJoakim/movie-title-time-series",
@@ -53,16 +74,5 @@
     "URL": "https://divsnacks.web.app/",
     "publicRepo": "https://github.com/FransJoakim/snake_game",
     "date": "July 2022"
-  },
-  {
-    "title": "MyPrivateChef",
-    "type": "Website",
-    "technologies": ["React", "TypeScript", "Firebase & Firestore"],
-    "description": "MyPrivateChef features a fictional booking service for busy people wanting to hire a chef, such as for a party. The website was made as a final project at the Salt bootcamp.",
-    "img": "myPrivateChef",
-    "URL": "https://myprivatechef-finalproject.web.app/",
-    "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",
-    "publicRepo2": "https://github.com/FransJoakim/myprivatechef-salt-server",
-    "date": "April 2022"
   }
 ]
