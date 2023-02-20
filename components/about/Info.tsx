@@ -18,11 +18,14 @@ const Info = () => {
           <h2 id="about" className="text-5xl font-thin">
             About
           </h2>
-          <p className="py-2">
+          <p className="py-3">
             Full-stack <b>Web developer</b>
           </p>
-          <p>
+          <p className="py-2">
             <span className={styles.fontChange}>Former</span>
+            <b> Tech support</b>
+            <span className={styles.fontChange}>, head of training,</span>
+            <br />
             <b> teacher</b>
             <span className={styles.fontChange}> & Edtech expert</span>
           </p>

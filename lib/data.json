@@ -35,6 +35,16 @@
     "date": "Mai 2022 - Juni 2022"
   },
   {
+    "title": "Movie title time-series",
+    "type": "Mini project",
+    "technologies": ["TypeScript", "React", "SASS"],
+    "description": "A fun small project, made for a job interview. Displays movie titles with common names on a timeline",
+    "img": "movie-title-time-series",
+    "URL": "https://movie-title-time-series.vercel.app/",
+    "publicRepo": "https://github.com/FransJoakim/movie-title-time-series",
+    "date": "Desember 2022"
+  },
+  {
     "title": "Snake",
     "type": "Game",
     "technologies": ["HTML, CSS, JavaScript"],
@@ -43,16 +53,6 @@
     "URL": "https://divsnacks.web.app/",
     "publicRepo": "https://github.com/FransJoakim/snake_game",
     "date": "July 2022"
-  },
-  {
-    "title": "Movie title time series",
-    "type": "Mini project",
-    "technologies": ["TypeScript", "React", "SASS"],
-    "description": "A fun small project, made for a job interview. Displays movie titles with common names on a timeline",
-    "img": "movie-title-time-series",
-    "URL": "https://movie-title-time-series.vercel.app/",
-    "publicRepo": "https://github.com/FransJoakim/movie-title-time-series",
-    "date": "Desember 2022"
   },
   {
     "title": "MyPrivateChef",
