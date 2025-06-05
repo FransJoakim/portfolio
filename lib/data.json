@@ -1,5 +1,14 @@
 [
   {
+    "title": "Digitalarkivet",
+    "type": "Website",
+    "technologies": ["Next", "ElasticSearch", "PHP", "Argo CD", "Kubernetes"],
+    "description": "Website for the Norwegian National Archives. I helped build the digital asset management system associated with the site, used to view and edit photos, documents and their metadata, from scratch.",
+    "img": "digitalarkivet",
+    "URL": "https://nye.digitalarkivet.no/",
+    "date": "From 2023 to present"
+  },
+  {
     "title": "Kabal",
     "type": "Card game",
     "technologies": [
@@ -54,16 +63,6 @@
     "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",
     "publicRepo2": "https://github.com/FransJoakim/myprivatechef-salt-server",
     "date": "April 2022"
-  },
-  {
-    "title": "Movie title time-series",
-    "type": "Mini project",
-    "technologies": ["TypeScript", "React", "SASS"],
-    "description": "Search for words in movietitles and see the result on an interactive timeline. A fun small project, made for a job application process.",
-    "img": "movie-title-time-series",
-    "URL": "https://movie-title-time-series.vercel.app/",
-    "publicRepo": "https://github.com/FransJoakim/movie-title-time-series",
-    "date": "Desember 2022"
   },
   {
     "title": "Snake",

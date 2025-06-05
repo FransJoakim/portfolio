@@ -16,20 +16,18 @@ const Info = () => {
       <div id={styles.profileInfo} className="ml-7">
         <div className={styles.profileInfo_text}>
           <h2 id="about" className="text-5xl font-thin">
-            About
+            About me
           </h2>
           <p className="py-3">
-            Full-stack <b>Web developer</b>
+            {"I'm a Full-stack"} <b>Web developer</b>
           </p>
           <p className="py-2">
-            <span className={styles.fontChange}>Former</span>
-            <b> Tech support</b>
-            <span className={styles.fontChange}>, head of training,</span>
-            <br />
-            <b> teacher</b>
-            <span className={styles.fontChange}> & Edtech expert</span>
+            <div className={styles.fontChange}>
+              {
+                "I love working on hard problems with a good team. Let's surprise outselves"
+              }
+            </div>
           </p>
-          <p className=""></p>
         </div>
         <div className={styles.profileInfo_img}>
           <Link href="https://github.com/FransJoakim">
