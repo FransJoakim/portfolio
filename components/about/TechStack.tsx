@@ -68,15 +68,15 @@ export const TechStack = () => {
       </div>
       <div className="flex w-full justify-between items-center">
         <TechIcon name="React" width={1} height={0.85} />
-        <TechIcon name="Jotai" width={2} height={0.75} />
+        <TechIcon name="Jotai" width={1} height={1.2} />
         <TechIcon name="Redux" width={2} />
         <TechIcon name="Next" width={1.7} height={0.8} />
-        <TechIcon name="NodeJS" />
+        <TechIcon name="Socket.IO" width={0.75} />
       </div>
       <div className="flex w-full justify-between items-center">
         <TechIcon name="TailwindCSS" width={0.8} />
+        <TechIcon name="Sass" width={0.9} />
         <TechIcon name="MUI" width={0.9} />
-        <TechIcon name="Socket.IO" width={0.75} />
         <TechIcon name="Jest" height={0.7} />
         <TechIcon name="Playwright" height={0.7} />
       </div>
@@ -86,13 +86,13 @@ export const TechStack = () => {
       >
         <TechIcon name="PHP" />
         <TechIcon name="GraphQL" />
-        <TechIcon name="S3" />
+        <TechIcon name="Kafka" />
         <TechIcon name="MongoDB" width={1.5} />
-        <TechIcon name="PostgreSQL" height={0.8} />
+        <TechIcon name="SQL" height={0.8} />
       </div>
       <div className="flex w-full justify-between items-center">
         <TechIcon name="Git" height={0.8} />
-        <TechIcon name="Github-Actions" width={1.6} height={0.8} />
+        <TechIcon name="Github-Actions" width={1} height={1} />
         <TechIcon name="Kubernetes" height={0.8} />
         <TechIcon name="Docker" width={1.5} />
         <TechIcon name="ArgoCD" />

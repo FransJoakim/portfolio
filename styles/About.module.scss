@@ -18,10 +18,11 @@
   }
 
   .profileInfo_img {
-    margin-top: 1.5rem;
-    width: 6.2rem;
+    margin-left: 1rem;
+    width: 5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: end;
   }
   .link {
     cursor: pointer;
