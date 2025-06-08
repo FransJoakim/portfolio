@@ -90,7 +90,7 @@ export const ScrollPosition = ({
         sectionRef.current.style.visibility = "hidden";
       }
     }
-  }, [clientWindowView]);
+  }, [clientWindowView, name, scrollEntryPoint, scrollExitPoint, setInView]);
   return (
     <div ref={sectionRef} className="w-full h-full">
       {children}
