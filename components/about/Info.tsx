@@ -44,8 +44,11 @@ const Info = () => {
             {"I'm a Full-stack"} <b>Web developer</b>
           </p>
           <p className={"pt-2 " + styles.fontChange}>
-            <div>I love working on hard problems with a good team.</div>
-            <div>{"Let's surprise outselves"}</div>
+            <div>
+              {
+                "I love working on hard problems with a good team. Let's surprise outselves"
+              }
+            </div>
           </p>
         </div>
       </div>
