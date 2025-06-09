@@ -41,7 +41,7 @@ const Info = () => {
             </div>
           </div>
           <p className="py-3">
-            {"I'm a Full-stack"} <b>Web developer</b>
+            {"I'm a Full-stack"} <b>Software Engineer</b>
           </p>
           <p className={"pt-2 " + styles.fontChange}>
             <div>
