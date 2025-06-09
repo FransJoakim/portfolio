@@ -9,6 +9,7 @@ export const Card = ({ project }: { project: portfolioProject }) => {
     date,
     URL,
     description,
+    purpose,
     technologies,
     type,
     publicRepo,
@@ -27,7 +28,7 @@ export const Card = ({ project }: { project: portfolioProject }) => {
         <div className={styles.card_info}>
           <h2 className="text-4xl">{title}</h2>
           <p>
-            {type} : {date}
+            {purpose} : {type} : {date}
           </p>
           <p className={styles.card_info_description}>{description}</p>
         </div>

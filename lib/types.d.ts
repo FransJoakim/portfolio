@@ -1,5 +1,6 @@
 export interface portfolioProject {
   title: string;
+  purpose: string;
   type: string;
   technologies: string[];
   description: string;

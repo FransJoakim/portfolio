@@ -1,15 +1,42 @@
 [
   {
     "title": "Digitalarkivet",
+    "purpose": "Work",
     "type": "Website",
     "technologies": ["Next", "ElasticSearch", "PHP", "Argo CD", "Kubernetes"],
-    "description": "Website for the Norwegian National Archives. I helped build the digital asset management system associated with the site, used to view and edit photos, documents and their metadata, from scratch.",
+    "description": "Website for the Norwegian National Archives. I contributed to building the digital asset management system from scratch—used for viewing and editing photos, documents, and their metadata.",
     "img": "digitalarkivet",
     "URL": "https://nye.digitalarkivet.no/",
     "date": "From 2023 to present"
   },
   {
+    "title": "Ponder",
+    "purpose": "Work",
+    "type": "Web application",
+    "technologies": [
+      "React",
+      "Fast API",
+      "TypeScript",
+      "Large Language Models"
+    ],
+    "description": "An application for automatic assessment and feedback in higher education, developed during my time at Disputas. We began the project before the rise of LLMs and pivoted from a graph-based approach to using language models for assessment and feedback.",
+    "img": "disputas",
+    "URL": "https://disputas.no/#home",
+    "date": "From 2022 to 2024"
+  },
+  {
+    "title": "Smart TV applications",
+    "purpose": "Work",
+    "type": "React Native applications",
+    "technologies": ["React Native", "TypeScript", "Redux"],
+    "description": "During a brief period at Norigin Media, I worked on Smart TV applications for various clients. The apps were developed using React Native and TypeScript.",
+    "img": "norigin-media",
+    "URL": "https://noriginmedia.com/smart-tv-apps/",
+    "date": "2023"
+  },
+  {
     "title": "Kabal",
+    "purpose": "Private project",
     "type": "Card game",
     "technologies": [
       "React",
@@ -18,7 +45,7 @@
       "React-DnD",
       "TailwindCSS"
     ],
-    "description": "Card game, also known as Solitarie. A fun though challenging project, featuring an advanced state management system. It treats each card as its own state, allowing cards to be moved with minimun knowledge of the state of other cards.",
+    "description": "A card game, also known as Solitaire. A fun yet challenging project featuring advanced state management—each card maintains its own state, enabling movement with minimal knowledge of other cards.",
     "img": "kabal",
     "URL": "https://kabal-psi.vercel.app/",
     "publicRepo": "https://github.com/FransJoakim/solitaire_game_aka_kabal",
@@ -26,9 +53,10 @@
   },
   {
     "title": "Mock TV program guide",
+    "purpose": "Job application",
     "type": "Web-application",
     "technologies": ["React", "TypeScript", "TailwindCSS"],
-    "description": "An mock Electronic Programe Guide (EPG) that allows you to find the 'current' shows. A project made as part of a job application process",
+    "description": "A mock Electronic Program Guide (EPG) that lets you find the “current” shows. Built as part of a job application process.",
     "img": "tvProgramGuide",
     "URL": "https://tv-program-guide.vercel.app/",
     "publicRepo": "https://github.com/FransJoakim/TV-program-guide-Norigin",
@@ -36,9 +64,10 @@
   },
   {
     "title": "Norwegian skiing",
+    "purpose": "Private project",
     "type": "Website",
     "technologies": ["GatsbyJS", "GraphQL", "Contentful"],
-    "description": "A video portfolio site, requested made for a video-project. Utilizes Contentful as (headless) CMS to allow content editing by website owner. The site displayed here displays mock data however.",
+    "description": "A video portfolio site created for a video project for a family member. Deploys as a JAM stack, using Gatsby frontend, and Contentful as a headless CMS in the backend. This enables content editing by the site owner. The version shown here uses mock data.",
     "img": "norwegianSkiing",
     "URL": "https://withoutfooter--majestic-boba-7f411f.netlify.app/",
     "publicRepo": "https://github.com/FransJoakim/NorwegianSkiing",
@@ -46,18 +75,20 @@
   },
   {
     "title": "CV Maker",
+    "purpose": "work",
     "type": "Web-application",
     "technologies": ["TypeScript", "React", "Redux", "pdfmake", "Tailwind"],
-    "description": "This was a project we worked on for the first weeks at Skyetec. While meant as an internal application, this was also a traning project.",
+    "description": "A project developed during the first couple of months I was at Skyetec. Intended as an internal tool at the company, it also served as a training project.",
     "img": "cvmaker",
     "URL": "https://cv-maker-three.vercel.app/webapp/skyeCV",
     "date": "Mai 2022 - Juni 2022"
   },
   {
     "title": "MyPrivateChef",
+    "purpose": "Final project at Salt",
     "type": "Website",
     "technologies": ["React", "TypeScript", "Firebase & Firestore"],
-    "description": "MyPrivateChef features a fictional booking service for busy people wanting to hire a chef, such as for a party. The website was made as a final project at the Salt bootcamp.",
+    "description": "MyPrivateChef is a fictional booking service for people looking to hire a private chef, for example for events. The site was created as the final project at the Salt bootcamp.",
     "img": "myPrivateChef",
     "URL": "https://myprivatechef-finalproject.web.app/",
     "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",
@@ -66,9 +97,10 @@
   },
   {
     "title": "Snake",
+    "purpose": "Private project",
     "type": "Game",
     "technologies": ["HTML, CSS, JavaScript"],
-    "description": "A classic game, that's just as fun to play as to make. The game works both on mobile and desktop",
+    "description": "A classic game that’s just as fun to build as it is to play. It works on both mobile and desktop.",
     "img": "snake",
     "URL": "https://divsnacks.web.app/",
     "publicRepo": "https://github.com/FransJoakim/snake_game",
