@@ -1,8 +1,8 @@
 import { atom, useRecoilValue } from "recoil";
 import portfolioProjects from "../../lib/data.json" assert { type: "json" };
 import styles from "../../styles/Portfolio.module.scss";
-import { clientWindowViewState } from "../../pages/index";
 import { useWindowSize } from "../../lib/utils";
+import { clientWindowViewState } from "../../lib/atoms";
 
 export interface portfolioProject {
   title: string;

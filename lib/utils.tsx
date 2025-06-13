@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { atom, useRecoilValue, useSetRecoilState } from "recoil";
-import { clientWindowViewState } from "../pages/index";
+import { clientWindowViewState } from "../lib/atoms";
 
 type sizeType =
   | undefined
@@ -113,3 +113,12 @@ export const sendMail = async (email: string, message: string) => {
   });
   console.log(await response);
 };
+
+export enum SectionScrollPosition {
+  AboutEntry = -500,
+  AboutExit = 300,
+  PortfolioEntry = 500,
+  PortfolioExit = 1300,
+  ContactEntry = 1300,
+  ContactExit = 3000,
+}

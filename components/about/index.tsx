@@ -1,16 +1,16 @@
 import { useEffect, useRef } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { clientWindowViewState } from "../../pages/index";
+import { clientWindowViewState } from "../../lib/atoms";
 import About from "./About";
-import { inViewAtom } from "../../lib/utils";
+import { inViewAtom, SectionScrollPosition } from "../../lib/utils";
 
 export default function Main() {
   const clientWindowView = useRecoilValue(clientWindowViewState);
   const sectionRef = useRef<HTMLDivElement>(null);
   const setInView = useSetRecoilState(inViewAtom);
 
-  const scrollEntryPoint = -500;
-  const scrollExitPoint = 300;
+  const scrollEntryPoint = SectionScrollPosition.AboutEntry;
+  const scrollExitPoint = SectionScrollPosition.AboutExit;
 
   useEffect(() => {
     if (sectionRef.current) {
@@ -38,7 +38,7 @@ export default function Main() {
         sectionRef.current.style.visibility = "hidden";
       }
     }
-  }, [clientWindowView, scrollEntryPoint, setInView]);
+  }, [clientWindowView, scrollEntryPoint, scrollExitPoint, setInView]);
 
   return (
     <div ref={sectionRef}>

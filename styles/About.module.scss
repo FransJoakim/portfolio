@@ -1,189 +1,37 @@
 #about {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: end;
-
-  #profilePicture {
-    min-width: 190px;
+  .fontChange {
+    animation: color-change 15s infinite;
+    font-weight: 300;
   }
 
-  .profileInfo_text {
-    font-size: 1.1rem;
-  }
+  .stackIcon {
+    filter: saturate(90%);
+    position: relative;
 
-  .profileInfo_text p {
-    margin-bottom: -0.3rem;
-  }
-
-  .profileInfo_img {
-    margin-left: 1rem;
-    width: 5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
-  }
-  .link {
-    cursor: pointer;
-  }
-
-  .container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-right: 4rem;
-    padding: 3rem;
-
-    .fontChange {
-      animation: color-change 15s infinite;
-      font-weight: 300;
-    }
-
-    .stackIcon {
-      filter: saturate(90%);
-
-      &:hover {
-        filter: saturate(102%);
-        transform: scale(1.2);
-      }
-      .altText {
-        position: absolute !important;
-        background-color: #353535;
-        color: #fff;
-        padding: 0.5rem 0.5rem;
-        border-radius: 6px;
-        // width: max-content;
-        font-size: 0.8rem;
-        z-index: 500;
-        margin-right: 30px;
-        bottom: 30%;
-        right: 53%;
-
-        &::after {
-          content: "";
-          position: absolute;
-          border-width: 8px;
-          border-style: solid;
-          border-color: #353535 transparent transparent transparent;
-          margin-right: 15px;
-          transform: rotate(-90deg);
-          top: 30%;
-          left: 100%;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 1350px) {
-    .container {
-      margin-right: 2rem;
-    }
-  }
-  @media (max-width: 1300px) {
-    .container {
-      margin-right: 1rem;
-    }
-  }
-  @media (max-width: 1250px) {
-    .container {
-      margin-right: 0;
-    }
-  }
-}
-@media (max-width: 1100px) {
-  #about {
-    justify-content: start;
-    margin-top: 10vh;
-
-    .container {
-      width: 50rem;
-      padding: 4rem;
-      align-items: center;
-
-      #techStack {
-        position: absolute;
-        top: calc(55rem - calc(60vw / 1.2));
-        width: 70vw;
-
-        #lastRow {
-          position: absolute;
-          flex-direction: column;
-          margin-left: 47vw;
-        }
-
-        #lastRow div {
-          height: 4rem;
-        }
-      }
+    &:hover {
+      filter: saturate(102%);
+      transform: scale(1.2);
     }
   }
 }
 
-@media (max-width: 945px) {
-  #profile {
-    flex-direction: column;
+.altText {
+  background-color: #353535;
+  color: #fff;
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
 
-    .profileInfo_text {
-      display: none;
-    }
-    .profileInfo_img {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 945px) {
-  #about {
-    .container {
-      #techStack {
-        top: 45vh;
-        width: 80vw;
-
-        #lastRow {
-          position: relative;
-          flex-direction: row;
-          margin-left: 0;
-        }
-
-        #lastRow div {
-          height: auto;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 775px) {
-  #about {
-    justify-content: center;
-
-    .container {
-      padding: 2rem;
-
-      #profile {
-        align-items: center;
-        margin-top: 3rem;
-      }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  #about {
-    .container {
-      padding: 1rem;
-
-      #profile {
-        margin-top: 4rem;
-      }
-
-      #techStack {
-        width: 90vw;
-      }
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #353535 transparent transparent transparent;
+    margin: 0;
   }
 }
 
@@ -487,4 +335,24 @@ $smalllines-size: $smallsquare-size/$squares-count;
 
 .jumpAnimation {
   animation: jump 3s infinite;
+}
+
+/* Fade top and bottom using mask-image (works in all modern browsers) */
+.fadeScrollMask {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 10%,
+    #000 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 10%,
+    #000 90%,
+    transparent 100%
+  );
+  /* For browsers that don't support mask-image, fallback to overlay gradients (optional) */
+  position: relative;
 }

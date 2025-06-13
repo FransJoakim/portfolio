@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 import { atom, useRecoilValue, useSetRecoilState } from "recoil";
 import type { NextPage } from "next";
@@ -6,7 +7,11 @@ import About from "../components/about";
 import Portfolio from "../components/portfolio/Portfolio";
 import Contact from "../components/contact/Contact";
 import styles from "../styles/Home.module.scss";
-import { inViewAtom, ScrollPosition } from "../lib/utils";
+import {
+  inViewAtom,
+  ScrollPosition,
+  SectionScrollPosition,
+} from "../lib/utils";
 
 export const clientWindowViewState = atom({
   key: "clientWindowView",
@@ -25,8 +30,6 @@ const Home: NextPage = () => {
     } else if (inView === "contact") {
       targetScrollPosition = (1300 + 3000) / 2; // Midpoint between entry and exit points
     }
-
-    console.log("Adjusting scroll to:", targetScrollPosition);
 
     // Smoothly scroll to the target position
     window.scrollTo({
@@ -58,15 +61,15 @@ const Home: NextPage = () => {
       <Header />
       <About />
       <ScrollPosition
-        scrollEntryPoint={500}
-        scrollExitPoint={1300}
+        scrollEntryPoint={SectionScrollPosition.PortfolioEntry}
+        scrollExitPoint={SectionScrollPosition.PortfolioExit}
         name="portfolio"
       >
         <Portfolio />
       </ScrollPosition>
       <ScrollPosition
-        scrollEntryPoint={1300}
-        scrollExitPoint={3000}
+        scrollEntryPoint={SectionScrollPosition.ContactEntry}
+        scrollExitPoint={SectionScrollPosition.ContactExit}
         name="contact"
       >
         <Contact />

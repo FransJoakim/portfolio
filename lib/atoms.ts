@@ -11,3 +11,8 @@ export const displayedProjectAtom = atom<portfolioProject>({
   key: "displayedProject",
   default: portfolioProjects[0],
 });
+
+export const clientWindowViewState = atom({
+  key: "clientWindowView",
+  default: 0,
+});

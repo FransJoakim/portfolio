@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
-import { clientWindowViewState } from "../../pages";
 import { inViewAtom } from "../../lib/utils";
 import styles from "../../styles/Home.module.scss";
+import { clientWindowViewState } from "../../lib/atoms";
 
 export const Header = () => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
