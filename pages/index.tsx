@@ -26,9 +26,15 @@ const Home: NextPage = () => {
     let targetScrollPosition = 0; // Default to the top of the page
 
     if (inView === "portfolio") {
-      targetScrollPosition = (500 + 1300) / 2; // Midpoint between entry and exit points
+      targetScrollPosition =
+        (SectionScrollPosition.PortfolioEntry +
+          SectionScrollPosition.PortfolioExit) /
+        2;
     } else if (inView === "contact") {
-      targetScrollPosition = (1300 + 3000) / 2; // Midpoint between entry and exit points
+      targetScrollPosition =
+        (SectionScrollPosition.ContactEntry +
+          SectionScrollPosition.ContactExit) /
+        2;
     }
 
     // Smoothly scroll to the target position
@@ -41,7 +47,7 @@ const Home: NextPage = () => {
   // Set a timeout to detect when scrolling stops
   const scrollTimeout = setTimeout(() => {
     adjustScrollToSection();
-  }, 300); // Adjust delay as needed
+  }, 500); // Adjust delay as needed
 
   const handleScroll = () => {
     setClientWindowView(window.scrollY);
@@ -74,6 +80,8 @@ const Home: NextPage = () => {
       >
         <Contact />
       </ScrollPosition>
+      {/* Spacer to allow scrolling through all sections */}
+      <div style={{ height: 1000 }} />
     </div>
   );
 };
