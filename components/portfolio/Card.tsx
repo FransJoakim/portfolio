@@ -13,10 +13,7 @@ export const Card = ({ project }: { project: portfolioProject }) => {
     technologies,
     type,
     publicRepo,
-    publicRepo2,
   } = project;
-  const size = useWindowSize();
-  if (!size) return null;
 
   const visitSite = () => {
     window.open(URL, "_blank");

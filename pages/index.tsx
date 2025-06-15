@@ -44,16 +44,16 @@ const Home: NextPage = () => {
     });
   };
 
-  // Set a timeout to detect when scrolling stops
-  const scrollTimeout = setTimeout(() => {
-    adjustScrollToSection();
-  }, 500); // Adjust delay as needed
+  // // Set a timeout to detect when scrolling stops
+  // const scrollTimeout = setTimeout(() => {
+  //   adjustScrollToSection();
+  // }, 1000); // Adjust delay as needed
 
   const handleScroll = () => {
     setClientWindowView(window.scrollY);
 
     // Clear previous timeout
-    clearTimeout(scrollTimeout);
+    // clearTimeout(scrollTimeout);
   };
 
   useEffect(() => {

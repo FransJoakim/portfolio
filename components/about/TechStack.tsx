@@ -21,28 +21,6 @@ export const TechStack = () => {
         clientWindowScrollY / (SectionScrollPosition.AboutExit - 200);
       // Set TechStack scrollTop to match the same ratio
       techStackRef.current.scrollTop = scrollRatio * techStackScrollableRange;
-
-      console.log("----------------------------------");
-      // console.log("scrollY:", scrollY);
-      console.log(
-        "innerRef.current.scrollHeight:",
-        innerRef.current.scrollHeight
-      );
-      console.log(
-        "techStackRef.current.clientHeight:",
-        techStackRef.current.clientHeight
-      );
-      console.log("techStackScrollableRange:", techStackScrollableRange);
-      console.log("clientWindowScrollY:", clientWindowScrollY);
-      console.log(
-        "SectionScrollPosition.AboutExit:",
-        SectionScrollPosition.AboutExit
-      );
-      console.log("scrollRatio:", scrollRatio);
-      console.log(
-        "scrollRatio * techStackScrollableRange:",
-        scrollRatio * techStackScrollableRange
-      );
     }
   }, [clientWindowScrollY]);
 

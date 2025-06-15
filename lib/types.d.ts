@@ -7,6 +7,5 @@ export interface portfolioProject {
   img: string;
   URL: string;
   publicRepo?: string;
-  publicRepo2?: string;
   date: string;
 }

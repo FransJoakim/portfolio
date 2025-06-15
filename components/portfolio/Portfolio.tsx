@@ -1,30 +1,10 @@
 import { atom, useRecoilValue } from "recoil";
 import portfolioProjects from "../../lib/data.json" assert { type: "json" };
-import styles from "../../styles/Portfolio.module.scss";
 import { useWindowSize } from "../../lib/utils";
-import { clientWindowViewState } from "../../lib/atoms";
-
-export interface portfolioProject {
-  title: string;
-  type: string;
-  technologies: string[];
-  description: string;
-  img: string;
-  URL: string;
-  publicRepo?: string;
-  publicRepo2?: string;
-  date: string;
-}
-
-export const projectsAtom = atom<portfolioProject[]>({
-  key: "projects",
-  default: portfolioProjects,
-});
-
-export const displayedProjectAtom = atom<portfolioProject>({
-  key: "displayedProject",
-  default: portfolioProjects[0],
-});
+import { clientWindowViewState, projectsAtom } from "../../lib/atoms";
+import { Carousel } from "./Carousel";
+import { portfolioProject } from "../../lib/types";
+import Image from "next/image";
 
 const Portfolio = () => {
   const clientWindowView = useRecoilValue(clientWindowViewState);
@@ -33,64 +13,24 @@ const Portfolio = () => {
 
   return (
     <section
-      className={styles.portfolio}
+      className="fixed flex h-screen w-screen pt-52 z-10" // Tailwind for .portfolio
       style={{ display: inView ? "" : "none" }}
     >
-      {projects.map((project) => (
+      <Carousel data={projects} />
+      {/* {projects.map((project) => (
         <Card project={project} key={project.title} />
-      ))}
+      ))} */}
       <BackgroundAnimation />
     </section>
   );
 };
 
-export const Card = ({ project }: { project: portfolioProject }) => {
-  const {
-    title,
-    img,
-    date,
-    URL,
-    description,
-    technologies,
-    type,
-    publicRepo,
-    publicRepo2,
-  } = project;
-  // const displayedProject = useRecoilValue(displayedProjectAtom);
-  const size = useWindowSize();
-  if (!size) return null;
-
-  // const isDisplayed = title === displayedProject.title;
-
-  const visitSite = () => {
-    window.open(URL, "_blank");
-  };
-
-  return (
-    <div onClick={visitSite}>
-      <div className={styles.card}>
-        <div className={styles.card_info}>
-          <h2 className="text-4xl">{title}</h2>
-          <p>
-            {type} : {date}
-          </p>
-          <p className={styles.card_info_description}>{description}</p>
-        </div>
-        <img
-          src={`/projectPhotos/${img}.png`}
-          alt={`Screenshot of the ${title} site`}
-        />
-      </div>
-    </div>
-  );
-};
-
 const BackgroundAnimation = () => {
   return (
-    <div id={styles.bracketAnimation_overlay} className="w-full h-full">
-      <div className={styles.wrap}>
+    <div id="bracketAnimation_overlay" className="w-full h-full">
+      <div className="relative w-full h-full flex items-center justify-center">
         <svg
-          className={styles.svg}
+          className="w-64 h-64"
           viewBox="0 0 256 256"
           xmlns="http://www.w3.org/2000/svg"
         >
