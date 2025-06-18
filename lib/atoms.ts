@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 import { portfolioProject } from "./types";
-import portfolioProjects from "./data.json" assert { type: "json" };
+import portfolioProjects from "./portfolioProjects.json" assert { type: "json" };
 
 export const projectsAtom = atom<portfolioProject[]>({
   key: "projects",

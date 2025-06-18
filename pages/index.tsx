@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { atom, useRecoilValue, useSetRecoilState } from "recoil";
 import type { NextPage } from "next";
 import { Header } from "../components/header/Header";
@@ -49,18 +49,18 @@ const Home: NextPage = () => {
   //   adjustScrollToSection();
   // }, 1000); // Adjust delay as needed
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     setClientWindowView(window.scrollY);
 
     // Clear previous timeout
     // clearTimeout(scrollTimeout);
-  };
+  }, [setClientWindowView]);
 
   useEffect(() => {
     window.scroll(0, 0);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   return (
     <div id={styles.page} className="flex-col h-screen">
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
         <Contact />
       </ScrollPosition>
       {/* Spacer to allow scrolling through all sections */}
-      <div style={{ height: 1000 }} />
+      <div style={{ height: 2000 }} />
     </div>
   );
 };

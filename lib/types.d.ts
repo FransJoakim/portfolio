@@ -6,6 +6,7 @@ export interface portfolioProject {
   description: string;
   img: string;
   URL: string;
+  linkText: string;
   publicRepo?: string;
   date: string;
 }

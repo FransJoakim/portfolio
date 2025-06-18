@@ -118,7 +118,7 @@ export enum SectionScrollPosition {
   AboutEntry = -500,
   AboutExit = 1000,
   PortfolioEntry = 1200,
-  PortfolioExit = 2000,
-  ContactEntry = 2200,
-  ContactExit = 3000,
+  PortfolioExit = 3300,
+  ContactEntry = 3500,
+  ContactExit = 4300,
 }

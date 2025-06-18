@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "../../styles/Portfolio.module.scss";
 import { useWindowSize } from "../../lib/utils";
 import { portfolioProject } from "../../lib/types";

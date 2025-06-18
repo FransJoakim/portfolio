@@ -7,6 +7,7 @@
     "description": "Website for the Norwegian National Archives. I contributed to building the digital asset management system from scratch—used for viewing and editing photos, documents, and their metadata.",
     "img": "digitalarkivet",
     "URL": "https://nye.digitalarkivet.no/",
+    "linkText": "Visit the site",
     "date": "From 2023 to present"
   },
   {
@@ -22,6 +23,8 @@
     "description": "An application for automatic assessment and feedback in higher education, developed during my time at Disputas. We began the project before the rise of LLMs and pivoted from a graph-based approach to using language models for assessment and feedback.",
     "img": "disputas",
     "URL": "https://disputas.no/#home",
+    "linkText": "Read more",
+
     "date": "From 2022 to 2024"
   },
   {
@@ -32,6 +35,7 @@
     "description": "During a brief period at Norigin Media, I worked on Smart TV applications for various clients. The apps were developed using React Native and TypeScript.",
     "img": "norigin-media",
     "URL": "https://noriginmedia.com/smart-tv-apps/",
+    "linkText": "Read more",
     "date": "2023"
   },
   {
@@ -48,6 +52,7 @@
     "description": "A card game, also known as Solitaire. A fun yet challenging project featuring advanced state management—each card maintains its own state, enabling movement with minimal knowledge of other cards.",
     "img": "kabal",
     "URL": "https://kabal-psi.vercel.app/",
+    "linkText": "Play the game",
     "publicRepo": "https://github.com/FransJoakim/solitaire_game_aka_kabal",
     "date": "October 2022"
   },
@@ -59,6 +64,7 @@
     "description": "A mock Electronic Program Guide (EPG) that lets you find the “current” shows. Built as part of a job application process.",
     "img": "tvProgramGuide",
     "URL": "https://tv-program-guide.vercel.app/",
+    "linkText": "Try it out",
     "publicRepo": "https://github.com/FransJoakim/TV-program-guide-Norigin",
     "date": "January 2023"
   },
@@ -70,6 +76,8 @@
     "description": "A video portfolio site created for a video project for a family member. Deploys as a JAM stack, using Gatsby frontend, and Contentful as a headless CMS in the backend. This enables content editing by the site owner. The version shown here uses mock data.",
     "img": "norwegianSkiing",
     "URL": "https://withoutfooter--majestic-boba-7f411f.netlify.app/",
+    "linkText": "Try it out",
+
     "publicRepo": "https://github.com/FransJoakim/NorwegianSkiing",
     "date": "September 2022"
   },
@@ -81,6 +89,8 @@
     "description": "A project developed during the first couple of months I was at Skyetec. Intended as an internal tool at the company, it also served as a training project.",
     "img": "cvmaker",
     "URL": "https://cv-maker-three.vercel.app/webapp/skyeCV",
+    "linkText": "Try it out",
+
     "date": "Mai 2022 - Juni 2022"
   },
   {
@@ -91,6 +101,7 @@
     "description": "MyPrivateChef is a fictional booking service for people looking to hire a private chef, for example for events. The site was created as the final project at the Salt bootcamp.",
     "img": "myPrivateChef",
     "URL": "https://myprivatechef-finalproject.web.app/",
+    "linkText": "Try it out",
     "publicRepo": "https://github.com/FransJoakim/myprivatechef-salt-client",
     "publicRepo2": "https://github.com/FransJoakim/myprivatechef-salt-server",
     "date": "April 2022"
@@ -103,6 +114,7 @@
     "description": "A classic game that’s just as fun to build as it is to play. It works on both mobile and desktop.",
     "img": "snake",
     "URL": "https://divsnacks.web.app/",
+    "linkText": "Play the game",
     "publicRepo": "https://github.com/FransJoakim/snake_game",
     "date": "July 2022"
   }
