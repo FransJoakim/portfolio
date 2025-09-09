@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { portfolioProject } from "../../lib/types";
+import { portfolioProject } from "../../types/types";
 import Image from "next/image";
 
 interface Props {

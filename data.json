@@ -7,7 +7,7 @@
     "description": "Website for the Norwegian National Archives. I contributed to building the digital asset management system from scratch—used for viewing and editing photos, documents, and their metadata.",
     "img": "digitalarkivet",
     "URL": "https://nye.digitalarkivet.no/",
-    "date": "From 2023 to present"
+    "date": "2023 - present"
   },
   {
     "title": "Ponder",
@@ -22,7 +22,7 @@
     "description": "An application for automatic assessment and feedback in higher education, developed during my time at Disputas. We began the project before the rise of LLMs and pivoted from a graph-based approach to using language models for assessment and feedback.",
     "img": "disputas",
     "URL": "https://disputas.no/#home",
-    "date": "From 2022 to 2024"
+    "date": "2022 - 2024"
   },
   {
     "title": "Smart TV applications",
@@ -54,7 +54,7 @@
   {
     "title": "Mock TV program guide",
     "purpose": "Job application",
-    "type": "Web-application",
+    "type": "Web application",
     "technologies": ["React", "TypeScript", "TailwindCSS"],
     "description": "A mock Electronic Program Guide (EPG) that lets you find the “current” shows. Built as part of a job application process.",
     "img": "tvProgramGuide",
@@ -76,12 +76,12 @@
   {
     "title": "CV Maker",
     "purpose": "work",
-    "type": "Web-application",
+    "type": "Web application",
     "technologies": ["TypeScript", "React", "Redux", "pdfmake", "Tailwind"],
     "description": "A project developed during the first couple of months I was at Skyetec. Intended as an internal tool at the company, it also served as a training project.",
     "img": "cvmaker",
     "URL": "https://cv-maker-three.vercel.app/webapp/skyeCV",
-    "date": "Mai 2022 - Juni 2022"
+    "date": "May 2022 - June 2022"
   },
   {
     "title": "MyPrivateChef",

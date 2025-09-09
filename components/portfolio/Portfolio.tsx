@@ -1,5 +1,5 @@
 import { useRecoilValue } from "recoil";
-import { clientWindowViewState } from "../../lib/atoms";
+import { clientWindowViewState } from "../../state/atoms";
 import { Carousel } from "./Carousel";
 import styles from "../../styles/Portfolio.module.scss";
 

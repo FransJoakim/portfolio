@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { portfolioProject } from "../../lib/types";
+import { portfolioProject } from "../../types/types";
 import { BiLogoGithub } from "react-icons/bi";
 import Image from "next/image";
 
@@ -94,7 +94,7 @@ export const CarouselCard = ({
       </div>
       <div className="w-full h-[20rem] p-4 px-6 bg-white/70 mb-[-0.125rem] flex-1 overflow-hidden">
         <h2 className="text-4xl">{item.title}</h2>
-        <p>
+        <p className="whitespace-normal break-keep">
           {item.type} : {item.date}
         </p>
         <p className="my-2 text-base">{item.description}</p>

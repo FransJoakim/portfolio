@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { atom, useRecoilValue, useSetRecoilState } from "recoil";
-import { clientWindowViewState } from "../lib/atoms";
+import { clientWindowViewState } from "../state/atoms";
 
 type sizeType =
   | undefined

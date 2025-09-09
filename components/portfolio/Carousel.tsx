@@ -1,13 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import { useRecoilValue } from "recoil";
-import { projectsAtom } from "../../lib/atoms";
 import { CarouselCard } from "./CarouselCard";
+import portfolioProjects from "../../data.json" assert { type: "json" };
 
 export const Carousel = () => {
   // Get projects from Recoil
-  const projects = useRecoilValue(projectsAtom);
-  const numCards = projects.length;
+  const numCards = portfolioProjects.length;
   // Use local state for active card
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -51,7 +49,7 @@ export const Carousel = () => {
           className="relative [perspective:1000px] [transform-style:preserve-3d] h-3/5 w-screen flex justify-center items-center translate-y-[-25%]"
         >
           {/* Render each slide */}
-          {projects.map((project, i) => (
+          {portfolioProjects.map((project, i) => (
             <CarouselCard
               key={i}
               item={project}

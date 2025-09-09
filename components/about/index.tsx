@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { clientWindowViewState } from "../../lib/atoms";
+import { clientWindowViewState } from "../../state/atoms";
 import About from "./About";
 import { inViewAtom, SectionScrollPosition } from "../../lib/utils";
 
