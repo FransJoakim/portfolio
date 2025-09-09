@@ -38,7 +38,7 @@ const Info = () => {
             </div>
           </div>
           <h2 className="py-3 mb-[-0.3rem] 2xl:text-3xl text-2xl font-light">
-            {"I'm a Full-stack"} <b>Software Engineer</b>
+            {"I am a Full-stack"} <b>Software Engineer</b>
           </h2>
           <h3 className="pt-2 fontChange 2xl:text-2xl text-xl font-light">
             {
