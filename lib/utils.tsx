@@ -116,9 +116,9 @@ export const sendMail = async (email: string, message: string) => {
 
 export enum SectionScrollPosition {
   AboutEntry = -500,
-  AboutExit = 1000,
-  PortfolioEntry = 1200,
-  PortfolioExit = 2000,
-  ContactEntry = 2200,
-  ContactExit = 3000,
+  AboutExit = 1100,
+  PortfolioEntry = 1300,
+  PortfolioExit = 2100,
+  ContactEntry = 2300,
+  ContactExit = 3100,
 }
