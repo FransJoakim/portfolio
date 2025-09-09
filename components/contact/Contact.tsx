@@ -6,10 +6,18 @@ const Contact = () => {
   const [email, setEmail] = useState<string>("");
   const [confirmedEmail, setConfirmedEmail] = useState("");
   const [message, setMessage] = useState<string>("");
+
+  const [validInput, setValidInput] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  const handleInputChange = (cb: (str: string) => void, str: string) => {
+    cb(str);
+    setValidInput(!!email && !!message);
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    if (!validInput) return;
     sendMail(email, message);
     setHasSubmitted(true);
     setConfirmedEmail(email);
@@ -31,16 +39,22 @@ const Contact = () => {
           <input
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => handleInputChange(setEmail, e.target.value)}
             placeholder="Your email"
           />
           <br />
           <textarea
             placeholder="Message.."
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => handleInputChange(setMessage, e.target.value)}
           />
-          <button type="submit">Send</button>
+          <button
+            type="submit"
+            disabled={!validInput}
+            className={styles.submit}
+          >
+            Send
+          </button>
         </form>
       )}
       {!!hasSubmitted && (

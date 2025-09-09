@@ -47,6 +47,18 @@
       margin: 0.5rem;
       padding: 0.5rem 1rem;
       border-radius: 0.2em;
+
+      &:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+        cursor: pointer;
+      }
+
+      &:disabled {
+        --tw-bg-opacity: 1;
+        background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+        cursor: not-allowed;
+      }
     }
   }
 }
