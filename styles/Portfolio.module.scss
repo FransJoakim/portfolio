@@ -51,18 +51,18 @@ $green: #9fd3c7;
 .svg {
   stroke: $green;
   position: fixed;
-  bottom: 0vh;
+  bottom: -30vh;
   transform-style: preserve-3d;
   z-index: -100;
 }
 
 $total: 2;
 @for $i from 1 through $total {
-  $scale: random(2) - 0.4;
+  $scale: random(2) - 4;
 
   .svg:nth-child(#{$i}) {
-    left: 0.5 * 2% - 20;
-    transform: scale(0.5 * $i - 0.1) rotate(random(360) + deg);
+    left: 0.4 * 2% - 20;
+    transform: scale(0.5 * $i - 0) rotate(random(300) + deg);
     z-index: $i - 7;
     filter: blur($i - 6 + px);
   }
