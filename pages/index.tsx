@@ -57,7 +57,7 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scroll(0, 1);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
