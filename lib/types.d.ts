@@ -9,4 +9,5 @@ export interface portfolioProject {
   publicRepo?: string;
   publicRepo2?: string;
   date: string;
+  linkText?: string;
 }
